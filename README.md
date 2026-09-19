@@ -1,46 +1,52 @@
-# [Your name]
+# Sai Krishna Banda | Product Management Portfolio
 
-[Product Manager / Product Owner / Product Analyst] focused on [product domain] for [target users].
-I turn unclear problems into product decisions: what to build, what to leave out, and how to measure whether it worked.
+**AI & Intelligent Automation · Enterprise SaaS · Product Analytics**
+
+Decision-focused case studies covering automation boundaries, workflow activation, and investment trade-offs. Each connects a product problem to evidence, requirements, and a recommendation.
 
 ## What I'm working on
 
-- **[Current role] at [company]:** Owning [product area], with a focus on [customer problem] and [measurable outcome].
-- **[Current project]:** Testing whether [proposed solution] helps [user segment] achieve [specific outcome]. Current stage: [discovery / validation / delivery].
+- **AI workflow design:** Evaluating ticket-routing policies, urgent-review paths, and human confirmation requirements.
+- **Enterprise product decisions:** Analyzing activation bottlenecks and allocating roadmap capacity under explicit constraints.
 
 ## How I work
 
-- **Define the decision before the deliverable.** Start with the user problem, the evidence available, and what would change my mind.
-- **Make trade-offs explicit.** Compare value, effort, risk, and confidence; document what will not make the cut and why.
-- **Test the riskiest assumption first.** Use interviews, a prototype, or a small experiment before committing to a full build.
-- **Own the measurement plan.** Set a success metric and guardrails before launch, then use the results to decide what happens next.
+- **Start with the decision.** Define the problem, evidence required, and assumptions that could change the direction.
+- **Make trade-offs visible.** Explain what gets funded, what gets deferred, and which constraints drive the choice.
+- **Design the exception path.** Specify uncertainty, human review, and recovery alongside the happy path.
+- **Measure useful outcomes.** Connect adoption to task completion and operational quality.
 
-## Skills & tools
+## Skills demonstrated in this portfolio
 
-<!-- Replace each bracketed list with skills and tools you can discuss through concrete examples. Delete anything you do not use. -->
-
-| Category | Skills / tools |
+| Category | Evidence |
 | --- | --- |
-| Product strategy & discovery | [Problem framing, customer interviews, segmentation, competitive analysis, opportunity sizing] |
-| Planning & delivery | [PRDs, prioritization, roadmaps, acceptance criteria, launch planning, stakeholder alignment] |
-| Product tools | [Jira, Linear, Confluence, Notion, Figma, Miro — retain only tools you use] |
-| Analytics & experimentation | [Excel / Google Sheets, SQL, product analytics, funnels, cohorts, A/B testing, Power BI / Tableau] |
-| Technical fluency | [APIs, data models, integrations, event tracking, system trade-offs, AI evaluation] |
+| Product strategy | Scope boundaries, opportunity assessment, capacity allocation, decision memos |
+| Requirements | PRD, acceptance criteria, operational flows, rollout and rollback criteria |
+| AI product judgment | Selective accuracy, automation coverage, critical exceptions, human review |
+| Analytics | Funnel definitions, segment comparisons, observation windows, experiment design |
+| Prioritization | Confidence-adjusted scoring, dependencies, sensitivity analysis |
+| Tools and formats | GitHub, Markdown, JSON datasets, Python standard-library analysis |
 
-## Portfolio / pinned-repo callouts
+## New AI product projects
 
-**Planned case studies:** These links currently open the project blueprints, not completed projects. Replace them with the individual repository links as you publish the work.
+| Project | Decision demonstrated |
+| --- | --- |
+| [Permission Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Retrieve only current, authorized evidence; abstain otherwise |
+| [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Separate suggested actions from permission to execute |
+| [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Select an approach against quality, latency, and cost constraints |
 
-| Project | Product question | Evidence to publish |
+## Additional product case studies
+
+| Project | Product decision | Included artifacts |
 | --- | --- | --- |
-| [Activation Drop-off Audit](PROJECT_IDEAS.md#1-activation-drop-off-audit) | Where do new users lose momentum, and what should change first? | Funnel analysis, tracking plan, experiment brief |
-| [Roadmap Trade-off Lab](PROJECT_IDEAS.md#2-roadmap-trade-off-lab) | What earns a place on the roadmap when capacity is fixed? | Scoring model, capacity plan, decision log |
-| [AI Support Copilot Evaluation](PROJECT_IDEAS.md#3-ai-support-copilot-evaluation) | When is an AI answer useful enough—and safe enough—to ship? | Test cases, evaluation rubric, release recommendation |
-| [Self-Serve Onboarding Spec](PROJECT_IDEAS.md#4-self-serve-onboarding-spec) | What is the smallest flow that gets a user to first value? | PRD, clickable prototype, acceptance criteria |
-| [Competitive Opportunity Brief](PROJECT_IDEAS.md#5-competitive-opportunity-brief) | Which underserved user problem is worth pursuing? | Evidence matrix, positioning, validation plan |
+| [Ticket Routing: Automation With Guardrails](https://github.com/bsaikrishnapm-source/ticket-routing) | Which suggestions can be automated, and which require review? | PRD, labeled cases, executable policy evaluation, release decision |
+| [Workflow Adoption: Find the Activation Bottleneck](https://github.com/bsaikrishnapm-source/workflow-adoption) | Where should the next onboarding investment go? | Synthetic account data, reproducible funnel analysis, tracking spec, experiment design |
+| [Enterprise Roadmap: Invest Within Capacity](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | What should a team ship with 12 team-weeks available? | Opportunity model, dependency-aware allocation, sensitivity analysis, stakeholder memo |
 
-## Connect
+These are completed, independent, AI-assisted case studies using fictional scenarios and synthetic data. They do not represent employer implementations, customer research, real model evaluations, or production results.
 
-[LinkedIn](https://www.linkedin.com/in/[your-linkedin-handle]/) · [Email](mailto:[your-email]) · [Portfolio](https://[your-portfolio-domain])
+## Explore
 
-<!-- Replace contact placeholders before sharing. Keep personal details, employer information, and metrics accurate and approved for public use. -->
+[Portfolio index](PORTFOLIO.md) · [GitHub profile](https://github.com/bsaikrishnapm-source) · [Project guide and run instructions](PORTFOLIO.md)
+
+Each project has its own repository, README, supporting documents, dataset, and Python script. Follow the run instructions in the project README. No additional packages or API keys are required.
