@@ -1,52 +1,70 @@
-# Sai Krishna Banda | Product Management Portfolio
+# Sai Krishna Banda
+### Product Management · AI Workflows · Enterprise SaaS · Product Analytics
 
-**AI & Intelligent Automation · Enterprise SaaS · Product Analytics**
+I turn complex workflow problems into clear requirements, measurable experiments, and practical product decisions. This portfolio demonstrates how I evaluate AI behavior, prioritize investments, and connect product analytics to what a team should build next.
 
-Decision-focused case studies covering automation boundaries, workflow activation, and investment trade-offs. Each connects a product problem to evidence, requirements, and a recommendation.
+[Explore the portfolio](PORTFOLIO.md) · [View product roadmap](https://github.com/bsaikrishnapm-source/permission-aware-retrieval/blob/main/ROADMAP.md)
 
-## What I'm working on
+---
 
-- **AI workflow design:** Evaluating ticket-routing policies, urgent-review paths, and human confirmation requirements.
-- **Enterprise product decisions:** Analyzing activation bottlenecks and allocating roadmap capacity under explicit constraints.
+## Featured product work
 
-## How I work
+### 01 · Permission-Aware Retrieval
+**How should a knowledge assistant decide which evidence it may use?**
 
-- **Start with the decision.** Define the problem, evidence required, and assumptions that could change the direction.
-- **Make trade-offs visible.** Explain what gets funded, what gets deferred, and which constraints drive the choice.
-- **Design the exception path.** Specify uncertainty, human review, and recovery alongside the happy path.
-- **Measure useful outcomes.** Connect adoption to task completion and operational quality.
+A runnable policy prototype that checks tenant, role, and document currency before returning evidence. Includes requirements, a prioritized backlog, and release criteria.
 
-## Skills demonstrated in this portfolio
+[Case study & code](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) · [Product roadmap](https://github.com/bsaikrishnapm-source/permission-aware-retrieval/blob/main/ROADMAP.md) · [User stories](https://github.com/bsaikrishnapm-source/permission-aware-retrieval/issues)
 
-| Category | Evidence |
-| --- | --- |
-| Product strategy | Scope boundaries, opportunity assessment, capacity allocation, decision memos |
-| Requirements | PRD, acceptance criteria, operational flows, rollout and rollback criteria |
-| AI product judgment | Selective accuracy, automation coverage, critical exceptions, human review |
-| Analytics | Funnel definitions, segment comparisons, observation windows, experiment design |
-| Prioritization | Confidence-adjusted scoring, dependencies, sensitivity analysis |
-| Tools and formats | GitHub, Markdown, JSON datasets, Python standard-library analysis |
+### 02 · Agent Action Approvals
+**When may an AI agent act, and when should a person decide?**
 
-## New AI product projects
+A decision simulator covering refund approvals, authority limits, tenant boundaries, invalid requests, and duplicate actions. Ten synthetic scenarios make the automation boundaries explicit.
 
-| Project | Decision demonstrated |
-| --- | --- |
-| [Permission Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Retrieve only current, authorized evidence; abstain otherwise |
-| [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Separate suggested actions from permission to execute |
-| [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Select an approach against quality, latency, and cost constraints |
+[Case study & code](https://github.com/bsaikrishnapm-source/agent-action-approvals) · [Product requirements](https://github.com/bsaikrishnapm-source/agent-action-approvals/blob/main/PRODUCT.md)
 
-## Additional product case studies
+### 03 · AI Cost Quality Lab
+**Which AI approach meets the product's quality, latency, and cost constraints?**
 
-| Project | Product decision | Included artifacts |
+A scenario model comparing three hypothetical approaches, including human-review costs and sensitivity analysis. Demonstrates a pilot recommendation grounded in explicit assumptions.
+
+[Case study & code](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) · [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md)
+
+## Analytics, prioritization & delivery
+
+| Project | Product question | Evidence included |
 | --- | --- | --- |
-| [Ticket Routing: Automation With Guardrails](https://github.com/bsaikrishnapm-source/ticket-routing) | Which suggestions can be automated, and which require review? | PRD, labeled cases, executable policy evaluation, release decision |
-| [Workflow Adoption: Find the Activation Bottleneck](https://github.com/bsaikrishnapm-source/workflow-adoption) | Where should the next onboarding investment go? | Synthetic account data, reproducible funnel analysis, tracking spec, experiment design |
-| [Enterprise Roadmap: Invest Within Capacity](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | What should a team ship with 12 team-weeks available? | Opportunity model, dependency-aware allocation, sensitivity analysis, stakeholder memo |
+| [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Which support assignments should be automated? | 20 synthetic cases, two policy thresholds, PRD, failure analysis and release recommendation |
+| [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) | Where should onboarding investment go first? | 40 synthetic accounts, segmented funnel, tracking plan and proposed experiment |
+| [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Which features fit a constrained delivery budget? | Eight opportunities, dependency-aware allocation, sensitivity analysis and stakeholder memo |
 
-These are completed, independent, AI-assisted case studies using fictional scenarios and synthetic data. They do not represent employer implementations, customer research, real model evaluations, or production results.
+## My product approach
 
-## Explore
+| Step | What I make explicit |
+| --- | --- |
+| Frame the problem | User, job to be done, current friction and decision required |
+| Define the evidence | Known facts, synthetic assumptions, gaps and validation needs |
+| Set the scope | Goals, non-goals, acceptance criteria and exception paths |
+| Make the trade-off | Impact, effort, confidence, dependencies and opportunity cost |
+| Decide and measure | Release gates, guardrails, success metrics and next experiment |
 
-[Portfolio index](PORTFOLIO.md) · [GitHub profile](https://github.com/bsaikrishnapm-source) · [Project guide and run instructions](PORTFOLIO.md)
+## Capabilities demonstrated
 
-Each project has its own repository, README, supporting documents, dataset, and Python script. Follow the run instructions in the project README. No additional packages or API keys are required.
+**Product strategy:** Problem framing · Opportunity assessment · Roadmap prioritization · Decision memos  
+**AI product management:** Evaluation criteria · Human approval · Retrieval governance · Cost-quality trade-offs  
+**Product analytics:** Funnel analysis · Segmentation · Activation definitions · Experiment planning  
+**Product delivery:** PRDs · User stories · Acceptance criteria · Dependencies · Release decisions  
+**Technical fluency:** Python analysis · JSON datasets · CSV exports · GitHub issues · Reproducible evaluation
+
+## How to review this portfolio
+
+1. Start with a project's problem, recommendation, and evidence boundaries.
+2. Review the product requirements or decision memo.
+3. Run the Python script from that repository's README.
+4. Inspect the dataset or export it to CSV using `python3 export_data.py`.
+
+Every project runs locally with Python 3 and uses the standard library. No API keys or additional packages are needed.
+
+## About the work
+
+These are independent, AI-assisted portfolio case studies and prototypes using fictional scenarios and synthetic data. They are not employer implementations, deployed customer products, or real-model benchmarks. Proposed roadmap work is labeled separately from implemented functionality.
