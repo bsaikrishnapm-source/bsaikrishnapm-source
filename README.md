@@ -3,7 +3,7 @@
 
 I turn complex workflow problems into clear requirements, measurable experiments, and practical product decisions. This portfolio demonstrates how I evaluate AI behavior, prioritize investments, and connect product analytics to what a team should build next.
 
-[Explore the case studies](PORTFOLIO.md) · [Portfolio roadmap](ROADMAP.md) · [GitHub project board](https://github.com/users/bsaikrishnapm-source/projects/1)
+[Open the interactive demos](START_HERE.md) · [Explore the case studies](PORTFOLIO.md) · [Portfolio roadmap](ROADMAP.md) · [GitHub project board](https://github.com/users/bsaikrishnapm-source/projects/1)
 
 ---
 
@@ -16,28 +16,28 @@ I turn complex workflow problems into clear requirements, measurable experiments
 | Enterprise SaaS & growth | [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) → [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Activation definitions, exceptions and experiment decisions |
 | Product strategy & execution | [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) → [Portfolio backlog](ROADMAP.md) | Capacity, dependencies, prioritization and acceptance criteria |
 
-**Portfolio at a glance:** Six standalone repositories · Runnable Python prototypes · Product requirements and decision memos · Synthetic datasets · CSV exports.
+**Portfolio at a glance:** Six standalone repositories · Six local browser demos · 45 new decision tests · Runnable Python analyses · Product requirements and decision memos · Synthetic datasets.
 
 ## Featured product work
 
 ### 01 · Permission-Aware Retrieval
 **How should a knowledge assistant decide which evidence it may use?**
 
-A runnable policy prototype that checks tenant, role, and document currency before returning evidence. Includes requirements, a prioritized backlog, and release criteria.
+An evidence-review demo with structured conflicts, version precedence, simulated access revocation and local audit history. Includes the original Python policy evaluation, requirements and release criteria.
 
 [Case study & code](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) · [Product roadmap](https://github.com/bsaikrishnapm-source/permission-aware-retrieval/blob/main/ROADMAP.md) · [User stories](https://github.com/bsaikrishnapm-source/permission-aware-retrieval/issues)
 
 ### 02 · Agent Action Approvals
 **When may an AI agent act, and when should a person decide?**
 
-A decision simulator covering refund approvals, authority limits, tenant boundaries, invalid requests, and duplicate actions. Ten synthetic scenarios make the automation boundaries explicit.
+An approval-inbox demo covering exact payload binding, expiry, manager thresholds and replay handling. Includes the original ten-case Python policy simulator. Identities and execution remain local simulations.
 
 [Case study & code](https://github.com/bsaikrishnapm-source/agent-action-approvals) · [Product requirements](https://github.com/bsaikrishnapm-source/agent-action-approvals/blob/main/PRODUCT.md)
 
 ### 03 · AI Cost Quality Lab
 **Which AI approach meets the product's quality, latency, and cost constraints?**
 
-A configurable scenario model comparing three hypothetical approaches, including human-review costs and sensitivity analysis. Includes validated inputs, CSV result exports and seven automated tests. Demonstrates a pilot recommendation grounded in explicit assumptions.
+A browser decision lab and Python model comparing three hypothetical approaches, including human-review costs and sensitivity analysis. Includes editable assumptions, release gates, CSV result exports and tested decision logic. Demonstrates a pilot recommendation grounded in explicit assumptions.
 
 [Case study & code](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) · [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md)
 
@@ -69,11 +69,11 @@ A configurable scenario model comparing three hypothetical approaches, including
 
 ## From product decision to delivery
 
-The [portfolio roadmap](ROADMAP.md) connects the existing prototypes to nine tracked improvements: one delivered and eight proposed. Each issue defines a user need, acceptance criteria, a success measure and dependencies. Work is sequenced into **Now / Next / Later**, with implemented baselines clearly separated from proposed extensions.
+The [portfolio roadmap](ROADMAP.md) connects the existing prototypes to nine tracked improvements: three completed local features and six open items, including partially implemented demos with explicit production gaps. Each issue defines a user need, acceptance criteria, a success measure and dependencies. Work is sequenced into **Now / Next / Later**, with implemented baselines clearly separated from proposed extensions.
 
 ## How to review this portfolio
 
-1. Start with a project's problem, recommendation, and evidence boundaries.
+1. [Open a demo](START_HERE.md), try its guided workflow, then read the problem, recommendation and evidence boundaries.
 2. Review the product requirements or decision memo.
 3. Run the Python script from that repository's README.
 4. Inspect the dataset or export it to CSV using `python3 export_data.py`.
