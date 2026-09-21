@@ -37,7 +37,7 @@ A decision simulator covering refund approvals, authority limits, tenant boundar
 ### 03 · AI Cost Quality Lab
 **Which AI approach meets the product's quality, latency, and cost constraints?**
 
-A scenario model comparing three hypothetical approaches, including human-review costs and sensitivity analysis. Demonstrates a pilot recommendation grounded in explicit assumptions.
+A configurable scenario model comparing three hypothetical approaches, including human-review costs and sensitivity analysis. Includes validated inputs, CSV result exports and seven automated tests. Demonstrates a pilot recommendation grounded in explicit assumptions.
 
 [Case study & code](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) · [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md)
 
@@ -69,7 +69,7 @@ A scenario model comparing three hypothetical approaches, including human-review
 
 ## From product decision to delivery
 
-The [portfolio roadmap](ROADMAP.md) connects the existing prototypes to nine proposed improvements. Each issue defines a user need, acceptance criteria, a success measure and dependencies. Work is sequenced into **Now / Next / Later**, with implemented baselines clearly separated from proposed extensions.
+The [portfolio roadmap](ROADMAP.md) connects the existing prototypes to nine tracked improvements: one delivered and eight proposed. Each issue defines a user need, acceptance criteria, a success measure and dependencies. Work is sequenced into **Now / Next / Later**, with implemented baselines clearly separated from proposed extensions.
 
 ## How to review this portfolio
 
