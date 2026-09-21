@@ -3,9 +3,20 @@
 
 I turn complex workflow problems into clear requirements, measurable experiments, and practical product decisions. This portfolio demonstrates how I evaluate AI behavior, prioritize investments, and connect product analytics to what a team should build next.
 
-[Explore the portfolio](PORTFOLIO.md) · [View product roadmap](https://github.com/bsaikrishnapm-source/permission-aware-retrieval/blob/main/ROADMAP.md)
+[Explore the case studies](PORTFOLIO.md) · [Portfolio roadmap](ROADMAP.md) · [GitHub project board](https://github.com/users/bsaikrishnapm-source/projects/1)
 
 ---
+
+## Choose your review path
+
+| Interested in | Start with | Product judgment to inspect |
+| --- | --- | --- |
+| AI product management | [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) → [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Evidence boundaries, permissions and human oversight |
+| AI platform economics | [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Quality gates, review costs and sensitivity |
+| Enterprise SaaS & growth | [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) → [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Activation definitions, exceptions and experiment decisions |
+| Product strategy & execution | [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) → [Portfolio backlog](ROADMAP.md) | Capacity, dependencies, prioritization and acceptance criteria |
+
+**Portfolio at a glance:** Six standalone repositories · Runnable Python prototypes · Product requirements and decision memos · Synthetic datasets · CSV exports.
 
 ## Featured product work
 
@@ -55,6 +66,10 @@ A scenario model comparing three hypothetical approaches, including human-review
 **Product analytics:** Funnel analysis · Segmentation · Activation definitions · Experiment planning  
 **Product delivery:** PRDs · User stories · Acceptance criteria · Dependencies · Release decisions  
 **Technical fluency:** Python analysis · JSON datasets · CSV exports · GitHub issues · Reproducible evaluation
+
+## From product decision to delivery
+
+The [portfolio roadmap](ROADMAP.md) connects the existing prototypes to nine proposed improvements. Each issue defines a user need, acceptance criteria, a success measure and dependencies. Work is sequenced into **Now / Next / Later**, with implemented baselines clearly separated from proposed extensions.
 
 ## How to review this portfolio
 
