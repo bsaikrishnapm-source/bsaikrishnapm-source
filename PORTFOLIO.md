@@ -1,6 +1,8 @@
 # Product Portfolio
 
-Six finished decision-focused case studies, focused on enterprise SaaS, AI workflows, product delivery, and analytics.
+Six decision-focused case studies with local interactive browser demos covering enterprise SaaS, AI workflows, product delivery and analytics.
+
+**[Start here: open the six product demos without coding](START_HERE.md)**
 
 | Project | Read first | Decision | Evidence |
 | --- | --- | --- | --- |
@@ -8,7 +10,7 @@ Six finished decision-focused case studies, focused on enterprise SaaS, AI workf
 | Workflow adoption | [Case study](https://github.com/bsaikrishnapm-source/workflow-adoption) | Test guided connector setup before broader onboarding redesign | 40 synthetic account journeys; segment-level drop-offs |
 | Roadmap investment | [Case study](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Fund auditability, connector recovery, and routing assistance | Eight scored opportunities; dependencies and fixed capacity |
 
-## New AI product prototypes
+## AI product prototypes
 
 - [Permission Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval): five fictional documents, eight labeled queries, a working retrieval policy, and product requirements.
 - [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals): ten policy scenarios, a working state-decision simulator, and approval requirements.
@@ -30,7 +32,7 @@ No employment details or employer performance percentages are used as portfolio 
 
 ## Delivery status
 
-Complete: six case studies, supporting product documents, synthetic datasets, calculated findings, a reproducibility script, and this portfolio index. Proposed experiments and production pilots are recommendations, not unfinished claims of execution.
+Implemented: six browser demos, six case studies, supporting product documents, synthetic datasets, Python baseline analyses and 45 new Node decision tests. Each demo has a walkthrough and validation record. UI rendering and accessibility checks remain unperformed here. Proposed experiments and production services remain explicitly separate from delivered local behavior.
 
 ## Repository structure
 
