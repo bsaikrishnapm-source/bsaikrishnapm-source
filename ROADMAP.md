@@ -18,7 +18,7 @@ Make enterprise AI decisions inspectable: what evidence may an assistant use, wh
 | --- | --- | --- |
 | [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Exact-topic policy filtering by tenant, role and active version | 5 documents and 8 labeled queries |
 | [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Read/refund decision simulation | 10 fictional scenarios |
-| [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Cost, quality and latency scenario comparison | 3 hypothetical variants |
+| [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Configurable cost, quality and latency comparison with CSV results | 3 hypothetical variants; 7 automated tests |
 | [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Confidence-threshold policy comparison | 20 synthetic tickets |
 | [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) | Segmented activation-funnel analysis | 40 synthetic accounts |
 | [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Dependency-aware capacity allocation | 8 opportunities; 256 candidate subsets |
@@ -38,9 +38,12 @@ Make enterprise AI decisions inspectable: what evidence may an assistant use, wh
 | --- | --- | --- |
 | P1 | [Frozen retrieval evaluation](https://github.com/bsaikrishnapm-source/permission-aware-retrieval/issues/3) | Does broader matching help without weakening access controls? |
 | P1 | [Evidence review and audit design](https://github.com/bsaikrishnapm-source/permission-aware-retrieval/issues/4) | Can a user understand and challenge the outcome? |
-| P1 | [Configurable AI cost assumptions](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/issues/1) | When does the pilot recommendation change? |
 | P1 | [Onboarding event validation](https://github.com/bsaikrishnapm-source/workflow-adoption/issues/1) | Is the activation denominator trustworthy? |
 | P1 | [Roadmap inclusion/exclusion rationale](https://github.com/bsaikrishnapm-source/enterprise-roadmap/issues/1) | Which assumptions drive the investment choice? |
+
+## Delivered improvements
+
+- [Configurable AI cost assumptions](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/issues/1): validated command-line controls, explicit eligibility reasons and CSV assumptions/results. Seven local tests passed. This is a completed local prototype extension.
 
 ## Later — demonstrate complete user workflows
 
@@ -52,7 +55,7 @@ P0 addresses an explicit unsafe or invalid decision path in a scenario. P1 impro
 
 ## Board working agreement
 
-All nine linked issues are **proposed** and begin in **Backlog**.
+Of the nine linked issues, configurable AI cost assumptions is **completed**. The other eight remain **proposed** and begin in **Backlog** (or Todo in the current board).
 - **Backlog:** Problem captured; implementation has not started.
 - **Ready:** Scope, dependency and acceptance criteria reviewed.
 - **In Progress:** Implementation actually underway.
@@ -67,4 +70,4 @@ A change has an understandable user outcome, reproducible verification, document
 
 ## Board setup status
 
-The public board exists. This roadmap and the nine repository issues are prepared; adding them to the native board requires an authenticated Projects session. Creating an issue alone does not place it on the board.
+The public board exists. The user's latest screenshot confirms the four retrieval issues are added. Other board additions and field changes require an authenticated Projects session. The AI cost assumptions issue is closed as completed; a board's custom status may still require an update. Creating or closing an issue alone does not guarantee its board membership or custom status.
