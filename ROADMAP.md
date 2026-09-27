@@ -60,3 +60,10 @@ A change has an understandable user outcome, reproducible verification, document
 ## Board status
 
 The user's last screenshot showed the four retrieval issues on the board in Todo. Repository code and issue status have been updated through the GitHub connection. Native board fields and membership were not edited; they may need to be synchronized with the table above.
+
+## New delivery — API Launch Readiness Console
+
+A seventh, self-contained case study is available at [projects/api-launch-readiness](projects/api-launch-readiness). It includes editable gates, accountable teams, evidence notes, dependency checks, hard critical blockers, three scenarios and a CSV decision record. Twelve automated engine tests pass. See its [validation report](projects/api-launch-readiness/VALIDATION.md) for the UI verification boundary.
+
+Next: conduct usability sessions with platform PMs, assess gate completeness with engineering and security reviewers, and design authenticated evidence ownership before connecting real release systems. No real launch approvals or user-study results are claimed.
+

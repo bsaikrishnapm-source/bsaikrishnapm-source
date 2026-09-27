@@ -1,51 +1,44 @@
 # Sai Krishna Banda
-### Product Manager · AI Workflows · Enterprise SaaS · Product Analytics
+### Product Manager · Enterprise AI · API Platforms · Product Analytics
 
-I turn complex workflow problems into clear product requirements, measurable experiments, and practical delivery decisions. My portfolio explores when AI should act, when people should stay in control, and which investments deserve limited team capacity.
+I translate complex workflows into clear product decisions: what to build, how to measure it, and when it is ready to launch.
 
-[LinkedIn](https://www.linkedin.com/in/saibanda) · [Email](mailto:bsaikrishna.pm@gmail.com) · [Demo setup guide](START_HERE.md) · [All case studies](PORTFOLIO.md)
+My work combines product strategy, technical fluency, and cross-functional delivery. This portfolio makes the reasoning inspectable through working code, decision memos, and explicit trade-offs.
 
-## Start with these three decisions
+[LinkedIn](https://www.linkedin.com/in/saibanda) · [Email](mailto:bsaikrishna.pm@gmail.com) · [Try the demos locally](START_HERE.md) · [Portfolio index](PORTFOLIO.md)
 
-| Case study | Product decision | Evidence to inspect |
+## Featured work
+
+| Case study | The decision | What to review |
 | --- | --- | --- |
-| **[AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab)** | Choose an approach that clears quality and latency gates before optimizing cost. | Three hypothetical approaches. Hybrid meets both gates at $270/month for 10,000 tasks; doubling review cost raises it to $430. [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md). |
-| **[Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption)** | Test connector setup before redesigning all of onboarding. | Forty synthetic accounts reveal the largest loss at connection. A seven-day activation definition keeps the outcome tied to successful use. [Experiment plan](https://github.com/bsaikrishnapm-source/workflow-adoption/blob/main/EXPERIMENT.md). |
-| **[Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap)** | Fund a feasible bundle with dependencies and contingency, then challenge its assumptions. | Eight opportunities, 256 combinations, 11 of 12 team-weeks allocated. Lower confidence changes the selected investment. [Stakeholder memo](https://github.com/bsaikrishnapm-source/enterprise-roadmap/blob/main/STAKEHOLDER_MEMO.md). |
+| **[API Launch Readiness Console](projects/api-launch-readiness)** — New | Should an API release be held, piloted, or sent for launch review? | Seven release gates, dependency checks, evidence requirements, editable scenarios, and CSV decision export. [Product brief](projects/api-launch-readiness/PRODUCT.md) |
+| **[AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab)** | Which approach meets quality and latency requirements at an acceptable cost? | Configurable assumptions, guided scenarios, comparison history, and exports. [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md) |
+| **[Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption)** | Where should the team focus its next onboarding experiment? | Event validation, activation definitions, segmented funnels, and an experiment plan. [Experiment](https://github.com/bsaikrishnapm-source/workflow-adoption/blob/main/EXPERIMENT.md) |
 
-**All figures above are synthetic scenario results, not customer or employer outcomes.**
+## More product decisions
 
-## AI behavior and human oversight
+| Project | Product management focus |
+| --- | --- |
+| [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Prioritization under capacity constraints, dependencies, and investment rationale |
+| [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Evidence permissions, policy conflicts, and human review |
+| [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Approval boundaries, expiry, and exact-action checks |
+| [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Automation thresholds, urgent-case overrides, and escalation |
 
-| Project | Question | Working demonstration |
-| --- | --- | --- |
-| [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Which evidence may an assistant use? | Structured policy conflicts, version precedence, simulated access revocation and local audit history. |
-| [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | What must a person approve before an agent acts? | Exact action review, approval expiry, manager thresholds and replay handling in a local simulation. |
-| [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Is confidence enough to automate assignment? | Threshold comparisons, urgent-case overrides and human-confirmed routing suggestions. |
+## Review in three minutes
 
-## What this portfolio demonstrates
+1. **Understand the decision:** Pick a featured project and read its problem and recommendation.
+2. **Inspect the experience:** Follow the [local demo guide](START_HERE.md); no API keys are required.
+3. **Examine the evidence:** Read its tests, validation notes, and documented limitations.
 
-- **Strategy:** Problem framing, opportunity sizing, prioritization and explicit trade-offs.
-- **AI product judgment:** Evaluation criteria, permission boundaries, human oversight and release gates.
-- **Analytics:** Funnel definitions, segmentation, data validation and experiment design.
-- **Execution:** Product requirements, acceptance criteria, dependencies and documented next decisions.
-- **Technical fluency:** Runnable Python analyses, browser prototypes, synthetic datasets and automated decision tests.
+## How I approach product work
 
-## Review in five minutes
+**Frame the problem → define the outcome → compare trade-offs → build a testable prototype → document the next decision.**
 
-1. Choose a case study above and read its decision and evidence.
-2. Open its product or stakeholder memo to inspect the reasoning.
-3. Use the [demo setup guide](START_HERE.md) to try the interactive workflow locally.
-4. Review its `VALIDATION.md` for test coverage and remaining verification gaps.
+The artifacts cover requirements, success metrics, release gates, experiment design, and delivery planning. Runnable implementations make the assumptions easier to challenge.
 
-Six repositories include six local browser demos and reproducible Python analyses. The demo decision logic has 45 automated tests from the implementation pass. Demos require no API keys; download a repository ZIP, extract it and open `demo/index.html`. They are not hosted applications, and browser visual/accessibility QA remains outstanding.
+[Portfolio roadmap](ROADMAP.md) · [Planning board](https://github.com/users/bsaikrishnapm-source/projects/1)
 
-## Delivery and next steps
+---
 
-The [portfolio roadmap](ROADMAP.md) connects implemented functionality to acceptance criteria and remaining work. The [GitHub project board](https://github.com/users/bsaikrishnapm-source/projects/1) provides a planning view; the roadmap and repository issues give the fuller implementation detail.
+**Evidence and authorship:** These are independent, AI-assisted prototypes using synthetic data. They are not employer deployments or measured customer outcomes. Real user research and production integrations are not claimed. Validation is documented per project; a working simulation does not establish production readiness.
 
-## About the work
-
-Independent, AI-assisted portfolio case studies using fictional scenarios and synthetic data. They demonstrate product reasoning and working prototypes, not employer implementations, deployed customer products or real-model benchmarks. Proposed experiments have not been run.
-
-[Connect on LinkedIn](https://www.linkedin.com/in/saibanda) · [Contact me](mailto:bsaikrishna.pm@gmail.com)

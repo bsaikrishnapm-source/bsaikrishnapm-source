@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API Launch Readiness · Sai Krishna Banda</title><link rel="stylesheet" href="style.css"><script defer src="engine.js"></script><script defer src="app.js"></script></head>
+<body><main>
+<header><span class="eyebrow">SAI KRISHNA BANDA / PRODUCT LAB 07</span><a href="https://github.com/bsaikrishnapm-source">View portfolio ↗</a></header>
+<section class="intro"><p class="eyebrow">PLATFORM PRODUCT MANAGEMENT</p><h1>A launch decision.<br>With evidence behind it.</h1><p>Review an API integration release. Resolve critical gates, inspect dependencies, and decide what is ready for a controlled rollout.</p><p class="notice">Independent prototype · Synthetic evidence · No connected systems</p></section>
+<section class="workspace" aria-label="Release workspace">
+<aside><h2>Release controls</h2><p class="muted">Partner Events API / fictional v1.0</p><label for="scenario">Load a scenario</label><select id="scenario"><option value="blocked">01 — Blocked release</option><option value="pilot">02 — Pilot candidate</option><option value="ready">03 — Ready for review</option></select><label for="threshold">Minimum readiness (%)</label><input id="threshold" type="number" min="0" max="100" value="85" step="1"><p class="muted">A high score never overrides a critical failure. Passing requires an owner, an evidence note, and cleared dependencies.</p><button id="export" type="button">Export decision CSV</button><p class="muted">Edits stay in this tab and reset when reloaded. Scenario changes replace your edits.</p></aside>
+<div><section id="result" aria-live="polite" aria-atomic="true"></section><div class="section-title"><h2>Release evidence</h2><span>7 gates · editable simulation</span></div><div id="gates"></div></div>
+</section><footer>Decision support, not release authorization. Evidence notes are self-reported and are not independently verified.</footer>
+</main></body></html>

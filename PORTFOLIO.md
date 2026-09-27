@@ -1,14 +1,18 @@
 # Product Portfolio
 
-Six decision-focused case studies with local interactive browser demos covering enterprise SaaS, AI workflows, product delivery and analytics.
+Seven decision-focused case studies with local interactive browser demos covering enterprise SaaS, AI workflows, product delivery and analytics.
 
-**[Start here: open the six product demos without coding](START_HERE.md)**
+**[Start here: open the product demos without coding](START_HERE.md)**
 
 | Project | Read first | Decision | Evidence |
 | --- | --- | --- | --- |
 | Ticket routing | [Case study](https://github.com/bsaikrishnapm-source/ticket-routing) | Keep a proposed auto-routing policy out of production | 20 synthetic labeled cases; high-confidence errors and an urgent miss |
 | Workflow adoption | [Case study](https://github.com/bsaikrishnapm-source/workflow-adoption) | Test guided connector setup before broader onboarding redesign | 40 synthetic account journeys; segment-level drop-offs |
 | Roadmap investment | [Case study](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Fund auditability, connector recovery, and routing assistance | Eight scored opportunities; dependencies and fixed capacity |
+
+## API platform launch planning — new
+
+[API Launch Readiness Console](projects/api-launch-readiness) adds a release-management case study: seven editable gates, dependency-aware evaluation, critical blockers, scenario comparison through presets, and a decision CSV. Includes a [product brief](projects/api-launch-readiness/PRODUCT.md), [decision log](projects/api-launch-readiness/DECISIONS.md), and [validation record](projects/api-launch-readiness/VALIDATION.md).
 
 ## AI product prototypes
 
@@ -32,8 +36,9 @@ No employment details or employer performance percentages are used as portfolio 
 
 ## Delivery status
 
-Implemented: six browser demos, six case studies, supporting product documents, synthetic datasets, Python baseline analyses and 45 new Node decision tests. Each demo has a walkthrough and validation record. UI rendering and accessibility checks remain unperformed here. Proposed experiments and production services remain explicitly separate from delivered local behavior.
+The original implementation pass delivered six browser demos, six case studies, supporting product documents, synthetic datasets, Python baseline analyses and 45 new Node decision tests. Each demo has a walkthrough and validation record. UI rendering and accessibility checks remain unperformed here. Proposed experiments and production services remain explicitly separate from delivered local behavior.
 
 ## Repository structure
 
-This profile repository is the portfolio index. All six projects live in the separate repositories linked above; their former duplicate folders have been removed from this repository. Each project runs independently.
+The original six projects live in the separate repositories linked above. The seventh, API Launch Readiness Console, is a self-contained project under `projects/api-launch-readiness` in this repository. Each project runs independently.
+

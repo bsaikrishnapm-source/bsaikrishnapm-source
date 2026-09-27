@@ -1,4 +1,4 @@
-# Start here — six interactive PM product demos
+# Start here — interactive PM product demos
 
 These independent prototypes demonstrate product decisions through working local browser experiences. Each repository also retains its original Python analysis and product documents.
 
@@ -20,14 +20,21 @@ Keep the demo folder's files together. No API key, account, terminal or software
 | Activation Analytics | [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) | Validate events, inject duplicates and missing signup, compare eligible cohort funnels |
 | Investment Planner | [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Change capacity, reserve and estimates; inspect selection/deferral explanations |
 
+## New: API Launch Readiness Console
+
+Download **this profile repository** as a ZIP, extract it, and open **projects/api-launch-readiness/demo/index.html**. Start with the blocked release, switch to Pilot candidate, then clear all gates. Remove an evidence note to see why a reported pass is insufficient. Export the current decision to CSV.
+
+[Project overview](projects/api-launch-readiness) · [Validation](projects/api-launch-readiness/VALIDATION.md)
+
 ## What reviewers can inspect
 
 Each repository includes a **DEMO_GUIDE.md** explaining the workflow, architecture and trade-offs, **VALIDATION.md** recording actual checks, and **test_demo.cjs** with executable decision tests.
 
-**Verification:** 45 new Node behavioral tests passed across the six decision engines. All six original Python entry points completed against their original baselines. Browser script syntax was checked. The local interfaces have not been visually or accessibility-tested in this environment; validation reports keep those manual checks open.
+**Original six-project verification:** 45 new Node behavioral tests passed across the six decision engines. All six original Python entry points completed against their original baselines. Browser script syntax was checked. The local interfaces have not been visually or accessibility-tested in this environment; validation reports keep those manual checks open.
 
 ## Scope
 
 All examples are synthetic. Approvals, roles, evidence permissions, ticket assignments and audit records are local simulations. No customer systems, payments, real-model APIs or private data are connected. State resets on refresh; explicit evidence downloads are retained by your browser.
 
 The Projects board is a delivery tracker. Adding an issue to it does not create a feature or launch a demo. Completed implementations and remaining production work are tracked in the [portfolio roadmap](ROADMAP.md).
+
