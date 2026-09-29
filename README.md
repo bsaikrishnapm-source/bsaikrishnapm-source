@@ -11,7 +11,7 @@ My work combines product strategy, technical fluency, and cross-functional deliv
 
 | Case study | The decision | What to review |
 | --- | --- | --- |
-| **[API Launch Readiness Console](projects/api-launch-readiness)** — New | Should an API release be held, piloted, or sent for launch review? | Seven release gates, dependency checks, evidence requirements, editable scenarios, and CSV decision export. [Product brief](projects/api-launch-readiness/PRODUCT.md) |
+| **[Project Sentinel](projects/project-sentinel)** — New flagship | Where is an ongoing project drifting from its plan, and what should the PM do next? | A working local dashboard with baseline tracking, persistent alerts, automatic monitoring, editing forms, and optional local AI briefs. [Screenshot](projects/project-sentinel/assets/dashboard.jpg) · [Validation](projects/project-sentinel/VALIDATION.md) |
 | **[AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab)** | Which approach meets quality and latency requirements at an acceptable cost? | Configurable assumptions, guided scenarios, comparison history, and exports. [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md) |
 | **[Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption)** | Where should the team focus its next onboarding experiment? | Event validation, activation definitions, segmented funnels, and an experiment plan. [Experiment](https://github.com/bsaikrishnapm-source/workflow-adoption/blob/main/EXPERIMENT.md) |
 
@@ -19,6 +19,7 @@ My work combines product strategy, technical fluency, and cross-functional deliv
 
 | Project | Product management focus |
 | --- | --- |
+| [API Launch Readiness Console](projects/api-launch-readiness) | Release gates, ownership, dependency checks, and go/no-go review |
 | [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Prioritization under capacity constraints, dependencies, and investment rationale |
 | [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Evidence permissions, policy conflicts, and human review |
 | [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Approval boundaries, expiry, and exact-action checks |
@@ -41,4 +42,5 @@ The artifacts cover requirements, success metrics, release gates, experiment des
 ---
 
 **Evidence and authorship:** These are independent, AI-assisted prototypes using synthetic data. They are not employer deployments or measured customer outcomes. Real user research and production integrations are not claimed. Validation is documented per project; a working simulation does not establish production readiness.
+
 

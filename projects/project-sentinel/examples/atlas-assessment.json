@@ -1,0 +1,252 @@
+{
+  "project_id": "atlas",
+  "as_of": "2026-09-29",
+  "health": "Needs attention",
+  "metrics": {
+    "expected": 69.9,
+    "actual": 35.5,
+    "completion": 28.4,
+    "gap": 34.4,
+    "scope_growth": 25.0,
+    "scope_points": 125,
+    "spent": 61000,
+    "budget": 80000,
+    "forecast": "2026-12-09",
+    "forecast_method": "Linear elapsed-time / reported current-scope completion; scenario estimate, not a commitment.",
+    "data_confidence": "Needs fresh data",
+    "done": 1,
+    "total": 7
+  },
+  "alerts": [
+    {
+      "id": "atlas:quality:release",
+      "project_id": "atlas",
+      "code": "quality",
+      "severity": "critical",
+      "title": "Quality needs a release decision",
+      "evidence": "2 critical defects, 6 high defects; 19/120 tests failing.",
+      "suggestion": "Review defect impact with QA and engineering; define the release gate and recovery owner.",
+      "owner": "Morgan \u00b7 PM",
+      "task_ids": [],
+      "fingerprint": "3abab578d07db26c"
+    },
+    {
+      "id": "atlas:schedule:plan",
+      "project_id": "atlas",
+      "code": "schedule",
+      "severity": "critical",
+      "title": "Delivery is behind the original plan",
+      "evidence": "Baseline progress 35.5% versus expected 69.9%: 34.4 percentage points behind.",
+      "suggestion": "Review unfinished baseline work with delivery leads; agree a recovery scope and publish the trade-off.",
+      "owner": "Morgan \u00b7 PM",
+      "task_ids": [],
+      "fingerprint": "9e4ec3facb525c45"
+    },
+    {
+      "id": "atlas:budget:burn",
+      "project_id": "atlas",
+      "code": "budget",
+      "severity": "warning",
+      "title": "Spend is outpacing delivery",
+      "evidence": "Spent $61,000 of $80,000 (76.2%); current scope progress 28.4%.",
+      "suggestion": "Review the cost-to-complete with finance and owners; distinguish upfront costs from persistent overruns.",
+      "owner": "Morgan \u00b7 PM",
+      "task_ids": [],
+      "fingerprint": "02853e8af33f452c"
+    },
+    {
+      "id": "atlas:capacity:Alex",
+      "project_id": "atlas",
+      "code": "capacity",
+      "severity": "warning",
+      "title": "Alex has too much near-term work",
+      "evidence": "46.0 remaining points due within seven days (including overdue), capacity 15.",
+      "suggestion": "Discuss reassignment or sequencing with the owner; check estimates before making a staffing decision.",
+      "owner": "Alex",
+      "task_ids": [
+        "A2",
+        "A3",
+        "A7"
+      ],
+      "fingerprint": "841badcf3ab09b19"
+    },
+    {
+      "id": "atlas:data:stale",
+      "project_id": "atlas",
+      "code": "data",
+      "severity": "warning",
+      "title": "Status evidence is stale",
+      "evidence": "1 unfinished tasks have no update for more than seven days.",
+      "suggestion": "Request fresh status before treating forecasts as reliable.",
+      "owner": "Morgan \u00b7 PM",
+      "task_ids": [
+        "A2"
+      ],
+      "fingerprint": "073d39894fe48e44"
+    },
+    {
+      "id": "atlas:decision:D1",
+      "project_id": "atlas",
+      "code": "decision",
+      "severity": "warning",
+      "title": "Decision overdue: Partner authentication approach",
+      "evidence": "Decision owner Platform lead; needed by 2026-09-26.",
+      "suggestion": "Give the decision maker options, a recommendation and the cost of waiting.",
+      "owner": "Platform lead",
+      "task_ids": [],
+      "fingerprint": "c246b054145be2bb"
+    },
+    {
+      "id": "atlas:dependency:A2",
+      "project_id": "atlas",
+      "code": "dependency",
+      "severity": "warning",
+      "title": "Blocked path: Authentication contract",
+      "evidence": "Task reported blocked.",
+      "suggestion": "Bring prerequisite owners together; unblock or resequence work and confirm the effect on the milestone.",
+      "owner": "Alex",
+      "task_ids": [
+        "A2"
+      ],
+      "fingerprint": "5e6455e0d16a33da"
+    },
+    {
+      "id": "atlas:dependency:A3",
+      "project_id": "atlas",
+      "code": "dependency",
+      "severity": "warning",
+      "title": "Blocked path: Partner sandbox",
+      "evidence": "Task reported blocked. Unfinished prerequisites: Authentication contract.",
+      "suggestion": "Bring prerequisite owners together; unblock or resequence work and confirm the effect on the milestone.",
+      "owner": "Alex",
+      "task_ids": [
+        "A3",
+        "A2"
+      ],
+      "fingerprint": "31d6b6f5472927f0"
+    },
+    {
+      "id": "atlas:dependency:A4",
+      "project_id": "atlas",
+      "code": "dependency",
+      "severity": "warning",
+      "title": "Blocked path: Self-service setup",
+      "evidence": "Task reported blocked. Unfinished prerequisites: Partner sandbox.",
+      "suggestion": "Bring prerequisite owners together; unblock or resequence work and confirm the effect on the milestone.",
+      "owner": "Sam",
+      "task_ids": [
+        "A4",
+        "A3"
+      ],
+      "fingerprint": "e73142612257762d"
+    },
+    {
+      "id": "atlas:dependency:A5",
+      "project_id": "atlas",
+      "code": "dependency",
+      "severity": "warning",
+      "title": "Blocked path: Contract and regression tests",
+      "evidence": "Task reported blocked. Unfinished prerequisites: Partner sandbox.",
+      "suggestion": "Bring prerequisite owners together; unblock or resequence work and confirm the effect on the milestone.",
+      "owner": "Riley",
+      "task_ids": [
+        "A5",
+        "A3"
+      ],
+      "fingerprint": "e73142612257762d"
+    },
+    {
+      "id": "atlas:overdue:A2",
+      "project_id": "atlas",
+      "code": "overdue",
+      "severity": "warning",
+      "title": "Authentication contract is overdue",
+      "evidence": "6 days past current due date 2026-09-23; progress 60%.",
+      "suggestion": "Ask the owner for remaining work, the blocker and a recovery date.",
+      "owner": "Alex",
+      "task_ids": [
+        "A2"
+      ],
+      "fingerprint": "10e984f753f34778"
+    },
+    {
+      "id": "atlas:overdue:A3",
+      "project_id": "atlas",
+      "code": "overdue",
+      "severity": "warning",
+      "title": "Partner sandbox is overdue",
+      "evidence": "1 days past current due date 2026-09-28; progress 35%.",
+      "suggestion": "Ask the owner for remaining work, the blocker and a recovery date.",
+      "owner": "Alex",
+      "task_ids": [
+        "A3"
+      ],
+      "fingerprint": "8ab6a98ea52a89e2"
+    },
+    {
+      "id": "atlas:scope:points",
+      "project_id": "atlas",
+      "code": "scope",
+      "severity": "warning",
+      "title": "Scope changed after kickoff",
+      "evidence": "Current scope 125 points; baseline 100 (+25.0%).",
+      "suggestion": "Review the change with the sponsor; exchange scope or capacity before committing dates.",
+      "owner": "Morgan \u00b7 PM",
+      "task_ids": [],
+      "fingerprint": "982b72122ba6134c"
+    }
+  ],
+  "trace": [
+    {
+      "tool": "schedule_check",
+      "findings": 3,
+      "reason": "Compare dated, weighted baseline with reported actuals."
+    },
+    {
+      "tool": "scope_and_cost_check",
+      "findings": 2,
+      "reason": "Compare scope points and spend with approved baseline."
+    },
+    {
+      "tool": "dependency_and_capacity_check",
+      "findings": 5,
+      "reason": "Inspect blocked work, prerequisite order and seven-day workload."
+    },
+    {
+      "tool": "quality_and_evidence_check",
+      "findings": 3,
+      "reason": "Inspect quality, decision latency and stale or future records."
+    }
+  ],
+  "brief": {
+    "source": "Evidence rules",
+    "summary": "Needs attention: 13 active signals. Baseline delivery is 35.5% versus 69.9% expected.",
+    "actions": [
+      {
+        "alert_id": "atlas:quality:release",
+        "owner": "Morgan \u00b7 PM",
+        "action": "Review defect impact with QA and engineering; define the release gate and recovery owner."
+      },
+      {
+        "alert_id": "atlas:schedule:plan",
+        "owner": "Morgan \u00b7 PM",
+        "action": "Review unfinished baseline work with delivery leads; agree a recovery scope and publish the trade-off."
+      },
+      {
+        "alert_id": "atlas:budget:burn",
+        "owner": "Morgan \u00b7 PM",
+        "action": "Review the cost-to-complete with finance and owners; distinguish upfront costs from persistent overruns."
+      },
+      {
+        "alert_id": "atlas:capacity:Alex",
+        "owner": "Alex",
+        "action": "Discuss reassignment or sequencing with the owner; check estimates before making a staffing decision."
+      },
+      {
+        "alert_id": "atlas:data:stale",
+        "owner": "Morgan \u00b7 PM",
+        "action": "Request fresh status before treating forecasts as reliable."
+      }
+    ]
+  }
+}

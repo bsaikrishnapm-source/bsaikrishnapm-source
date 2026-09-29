@@ -2,7 +2,16 @@
 
 These independent prototypes demonstrate product decisions through working local browser experiences. Each repository also retains its original Python analysis and product documents.
 
-## Open a demo without coding
+## New: Project Sentinel — working PM monitoring software
+
+1. Download this profile repository as a ZIP and extract it.
+2. Open a terminal in `projects/project-sentinel`.
+3. Run `python3 app.py` (Windows: `py -3 app.py`).
+4. Open **http://127.0.0.1:8765** on that computer.
+
+Create your baseline, update work, inspect alerts and export a status brief. The background monitor runs while the Python process is active. [Laptop setup](projects/project-sentinel/LAPTOP_SETUP.md) · [Screenshot](projects/project-sentinel/assets/dashboard.jpg) · [Validation](projects/project-sentinel/VALIDATION.md).
+
+## Open the earlier browser demos without coding
 
 1. Open a repository from the table below.
 2. Select the green **Code** button, then **Download ZIP**.
@@ -34,7 +43,8 @@ Each repository includes a **DEMO_GUIDE.md** explaining the workflow, architectu
 
 ## Scope
 
-All examples are synthetic. Approvals, roles, evidence permissions, ticket assignments and audit records are local simulations. No customer systems, payments, real-model APIs or private data are connected. State resets on refresh; explicit evidence downloads are retained by your browser.
+All examples are synthetic. Approvals, roles, evidence permissions, ticket assignments and audit records are local simulations. No customer systems, payments, real-model APIs or private data are connected. The earlier browser demos reset on refresh. Project Sentinel persists projects and alert states in local SQLite storage. Explicit downloads are retained by your browser.
 
 The Projects board is a delivery tracker. Adding an issue to it does not create a feature or launch a demo. Completed implementations and remaining production work are tracked in the [portfolio roadmap](ROADMAP.md).
+
 

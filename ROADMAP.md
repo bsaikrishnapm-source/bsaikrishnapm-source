@@ -67,3 +67,10 @@ A seventh, self-contained case study is available at [projects/api-launch-readin
 
 Next: conduct usability sessions with platform PMs, assess gate completeness with engineering and security reviewers, and design authenticated evidence ownership before connecting real release systems. No real launch approvals or user-study results are claimed.
 
+
+## Project Sentinel — functional local MVP
+
+Published the [PM project-monitoring application](projects/project-sentinel), based on Sai's idea to detect delivery problems after kickoff. Delivered baseline protection, drift detection, project/task/evidence forms, persistent acknowledgement and resolution, scheduled checks, JSON ingestion/export and optional local AI briefs. Validation: **39 Python tests and 10 browser workflow checks passed**, including a mobile overflow fix.
+
+Next deployment step: confirm the old laptop's OS and resources, run the local application there, and select an authenticated private access method. Remote connection and hosting have not been configured. Direct project-system connectors, outbound notifications, approved rebaseline workflow and real-user validation remain open.
+

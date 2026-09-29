@@ -1,6 +1,6 @@
 # Product Portfolio
 
-Seven decision-focused case studies with local interactive browser demos covering enterprise SaaS, AI workflows, product delivery and analytics.
+Eight decision-focused case studies with browser demos and local monitoring software covering enterprise SaaS, AI workflows, product delivery and analytics.
 
 **[Start here: open the product demos without coding](START_HERE.md)**
 
@@ -10,7 +10,11 @@ Seven decision-focused case studies with local interactive browser demos coverin
 | Workflow adoption | [Case study](https://github.com/bsaikrishnapm-source/workflow-adoption) | Test guided connector setup before broader onboarding redesign | 40 synthetic account journeys; segment-level drop-offs |
 | Roadmap investment | [Case study](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Fund auditability, connector recovery, and routing assistance | Eight scored opportunities; dependencies and fixed capacity |
 
-## API platform launch planning — new
+## Project Sentinel — new flagship
+
+Built from my idea for a PM early warning system after kickoff: [Project Sentinel](projects/project-sentinel) compares delivery with its original baseline and suggests evidence-linked next steps. It includes project creation, task/evidence editors, risk checks, persistent alerts, automatic scans and optional local AI briefing. **39 Python tests and 10 real-browser workflow checks passed.** [Product brief](projects/project-sentinel/PRODUCT.md) · [Screenshot](projects/project-sentinel/assets/dashboard.jpg) · [Laptop setup](projects/project-sentinel/LAPTOP_SETUP.md).
+
+## API platform launch planning
 
 [API Launch Readiness Console](projects/api-launch-readiness) adds a release-management case study: seven editable gates, dependency-aware evaluation, critical blockers, scenario comparison through presets, and a decision CSV. Includes a [product brief](projects/api-launch-readiness/PRODUCT.md), [decision log](projects/api-launch-readiness/DECISIONS.md), and [validation record](projects/api-launch-readiness/VALIDATION.md).
 
@@ -30,7 +34,7 @@ These broaden the portfolio into retrieval governance, agent action controls, an
 
 ## Evidence and authorship
 
-Prepared with AI assistance as independent portfolio demonstrations. All datasets and business inputs were deliberately constructed for these scenarios. No interviews, customer deployments, model API calls, or business-impact experiments were performed. The ticket-routing scores are hypothetical classifier inputs, not measured model outputs. The runnable script verifies calculations and illustrates decision rules; it does not train or call an AI model.
+Prepared with AI assistance as independent portfolio demonstrations. All datasets and business inputs were deliberately constructed for these scenarios. No interviews, customer deployments, model API calls, or business-impact experiments were performed. The ticket-routing scores are hypothetical classifier inputs, not measured model outputs. The original analyses verify calculations and decision rules without calling AI models. Project Sentinel adds an optional local-model adapter; its tests used mocked responses and no real-model inference result is claimed.
 
 No employment details or employer performance percentages are used as portfolio evidence.
 
@@ -40,5 +44,6 @@ The original implementation pass delivered six browser demos, six case studies, 
 
 ## Repository structure
 
-The original six projects live in the separate repositories linked above. The seventh, API Launch Readiness Console, is a self-contained project under `projects/api-launch-readiness` in this repository. Each project runs independently.
+The original six projects live in the separate repositories linked above. The seventh, API Launch Readiness Console, is a self-contained project under `projects/api-launch-readiness` in this repository. Each project runs independently. Project Sentinel is the eighth case study, under `projects/project-sentinel`, and runs as a local Python server.
+
 

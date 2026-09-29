@@ -1,0 +1,165 @@
+{
+  "id": "atlas",
+  "name": "Atlas Partner API",
+  "owner": "Morgan \u00b7 PM",
+  "objective": "Launch partner self-service onboarding with reliable API access.",
+  "baseline": {
+    "start_date": "2026-09-01",
+    "target_date": "2026-10-13",
+    "budget": 80000,
+    "scope_points": 100
+  },
+  "spent": 61000,
+  "team": [
+    {
+      "name": "Alex",
+      "weekly_capacity": 15
+    },
+    {
+      "name": "Sam",
+      "weekly_capacity": 18
+    },
+    {
+      "name": "Riley",
+      "weekly_capacity": 12
+    }
+  ],
+  "quality": {
+    "open_critical": 2,
+    "open_high": 6,
+    "total_tests": 120,
+    "failed_tests": 19
+  },
+  "decisions": [
+    {
+      "id": "D1",
+      "title": "Partner authentication approach",
+      "owner": "Platform lead",
+      "due_date": "2026-09-26",
+      "status": "open"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "A1",
+      "title": "Discovery and acceptance criteria",
+      "owner": "Alex",
+      "points": 10,
+      "baseline_points": 10,
+      "baseline_start": "2026-09-01",
+      "baseline_due": "2026-09-07",
+      "due_date": "2026-09-07",
+      "progress": 100,
+      "status": "done",
+      "updated_at": "2026-09-07",
+      "depends_on": [],
+      "completed_at": "2026-09-07",
+      "blocked_since": null
+    },
+    {
+      "id": "A2",
+      "title": "Authentication contract",
+      "owner": "Alex",
+      "points": 20,
+      "baseline_points": 20,
+      "baseline_start": "2026-09-08",
+      "baseline_due": "2026-09-23",
+      "due_date": "2026-09-23",
+      "progress": 60,
+      "status": "blocked",
+      "updated_at": "2026-09-20",
+      "depends_on": [],
+      "completed_at": null,
+      "blocked_since": "2026-09-24"
+    },
+    {
+      "id": "A3",
+      "title": "Partner sandbox",
+      "owner": "Alex",
+      "points": 20,
+      "baseline_points": 20,
+      "baseline_start": "2026-09-13",
+      "baseline_due": "2026-09-28",
+      "due_date": "2026-09-28",
+      "progress": 35,
+      "status": "in_progress",
+      "updated_at": "2026-09-28",
+      "depends_on": [
+        "A2"
+      ],
+      "completed_at": null,
+      "blocked_since": null
+    },
+    {
+      "id": "A4",
+      "title": "Self-service setup",
+      "owner": "Sam",
+      "points": 20,
+      "baseline_points": 20,
+      "baseline_start": "2026-09-19",
+      "baseline_due": "2026-10-04",
+      "due_date": "2026-10-04",
+      "progress": 25,
+      "status": "in_progress",
+      "updated_at": "2026-09-28",
+      "depends_on": [
+        "A3"
+      ],
+      "completed_at": null,
+      "blocked_since": null
+    },
+    {
+      "id": "A5",
+      "title": "Contract and regression tests",
+      "owner": "Riley",
+      "points": 15,
+      "baseline_points": 15,
+      "baseline_start": "2026-09-22",
+      "baseline_due": "2026-10-08",
+      "due_date": "2026-10-08",
+      "progress": 10,
+      "status": "in_progress",
+      "updated_at": "2026-09-28",
+      "depends_on": [
+        "A3"
+      ],
+      "completed_at": null,
+      "blocked_since": null
+    },
+    {
+      "id": "A6",
+      "title": "Pilot and operational handoff",
+      "owner": "Sam",
+      "points": 15,
+      "baseline_points": 15,
+      "baseline_start": "2026-10-04",
+      "baseline_due": "2026-10-13",
+      "due_date": "2026-10-13",
+      "progress": 0,
+      "status": "todo",
+      "updated_at": "2026-09-28",
+      "depends_on": [
+        "A4",
+        "A5"
+      ],
+      "completed_at": null,
+      "blocked_since": null
+    },
+    {
+      "id": "A7",
+      "title": "Added bulk-import requirement",
+      "owner": "Alex",
+      "points": 25,
+      "baseline_points": 0,
+      "baseline_start": "2026-09-25",
+      "baseline_due": "2026-10-03",
+      "due_date": "2026-10-03",
+      "progress": 0,
+      "status": "todo",
+      "updated_at": "2026-09-28",
+      "depends_on": [],
+      "completed_at": null,
+      "blocked_since": null
+    }
+  ]
+}
