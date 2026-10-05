@@ -2,6 +2,12 @@
 
 These independent prototypes demonstrate product decisions through working local browser experiences. Each repository also retains its original Python analysis and product documents.
 
+## New: AgentTrace — AI agent evaluation
+
+Download this profile repository as a ZIP, extract it, and open **projects/agenttrace/index.html**. Start with the unsafe candidate, inspect Billing and the two tool-policy violations, then switch to the clean and missing-coverage scenarios. Adjust review thresholds, import a JSON dataset or export the review memo. No server or API key is required. Data resets on reload.
+
+[Project overview](projects/agenttrace) · [Validation](projects/agenttrace/VALIDATION.md)
+
 ## New: Project Sentinel — working PM monitoring software
 
 1. Download this profile repository as a ZIP and extract it.
@@ -46,5 +52,3 @@ Each repository includes a **DEMO_GUIDE.md** explaining the workflow, architectu
 All examples are synthetic. Approvals, roles, evidence permissions, ticket assignments and audit records are local simulations. No customer systems, payments, real-model APIs or private data are connected. The earlier browser demos reset on refresh. Project Sentinel persists projects and alert states in local SQLite storage. Explicit downloads are retained by your browser.
 
 The Projects board is a delivery tracker. Adding an issue to it does not create a feature or launch a demo. Completed implementations and remaining production work are tracked in the [portfolio roadmap](ROADMAP.md).
-
-

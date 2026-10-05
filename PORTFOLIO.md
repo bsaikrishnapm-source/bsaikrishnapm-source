@@ -1,6 +1,6 @@
 # Product Portfolio
 
-Eight decision-focused case studies with browser demos and local monitoring software covering enterprise SaaS, AI workflows, product delivery and analytics.
+Nine decision-focused case studies with browser demos and local monitoring software covering enterprise SaaS, AI workflows, product delivery and analytics.
 
 **[Start here: open the product demos without coding](START_HERE.md)**
 
@@ -9,6 +9,10 @@ Eight decision-focused case studies with browser demos and local monitoring soft
 | Ticket routing | [Case study](https://github.com/bsaikrishnapm-source/ticket-routing) | Keep a proposed auto-routing policy out of production | 20 synthetic labeled cases; high-confidence errors and an urgent miss |
 | Workflow adoption | [Case study](https://github.com/bsaikrishnapm-source/workflow-adoption) | Test guided connector setup before broader onboarding redesign | 40 synthetic account journeys; segment-level drop-offs |
 | Roadmap investment | [Case study](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Fund auditability, connector recovery, and routing assistance | Eight scored opportunities; dependencies and fixed capacity |
+
+## AgentTrace — AI agent evaluation
+
+[AgentTrace](projects/agenttrace) compares recorded baseline and candidate runs, checks tool permissions and approvals, exposes segment regressions, and exports an explicit review recommendation. Includes three synthetic scenarios, a browser dashboard, JSON import/export, command-line evaluation, product brief and data contract. **18 engine tests and three CLI scenario checks passed; browser validation is pending.** [Validation](projects/agenttrace/VALIDATION.md).
 
 ## Project Sentinel — new flagship
 
@@ -47,3 +51,5 @@ The original implementation pass delivered six browser demos, six case studies, 
 The original six projects live in the separate repositories linked above. The seventh, API Launch Readiness Console, is a self-contained project under `projects/api-launch-readiness` in this repository. Each project runs independently. Project Sentinel is the eighth case study, under `projects/project-sentinel`, and runs as a local Python server.
 
 
+
+AgentTrace is the ninth case study, under `projects/agenttrace`, and opens directly in a browser. Its Node CLI has no third-party dependencies.

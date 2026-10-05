@@ -11,6 +11,7 @@ My work combines product strategy, technical fluency, and cross-functional deliv
 
 | Case study | The decision | What to review |
 | --- | --- | --- |
+| **[AgentTrace](projects/agenttrace)** — New | Should an AI-agent change advance to human release review? | Paired evaluations, tool-policy checks, segment regressions, editable review gates and exported decision memos. [Product brief](projects/agenttrace/PRODUCT.md) · [Validation](projects/agenttrace/VALIDATION.md) |
 | **[Project Sentinel](projects/project-sentinel)** — New flagship | Where is an ongoing project drifting from its plan, and what should the PM do next? | A working local dashboard with baseline tracking, persistent alerts, automatic monitoring, editing forms, and optional local AI briefs. [Screenshot](projects/project-sentinel/assets/dashboard.jpg) · [Validation](projects/project-sentinel/VALIDATION.md) |
 | **[AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab)** | Which approach meets quality and latency requirements at an acceptable cost? | Configurable assumptions, guided scenarios, comparison history, and exports. [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md) |
 | **[Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption)** | Where should the team focus its next onboarding experiment? | Event validation, activation definitions, segmented funnels, and an experiment plan. [Experiment](https://github.com/bsaikrishnapm-source/workflow-adoption/blob/main/EXPERIMENT.md) |
@@ -42,5 +43,3 @@ The artifacts cover requirements, success metrics, release gates, experiment des
 ---
 
 **Evidence and authorship:** These are independent, AI-assisted prototypes using synthetic data. They are not employer deployments or measured customer outcomes. Real user research and production integrations are not claimed. Validation is documented per project; a working simulation does not establish production readiness.
-
-

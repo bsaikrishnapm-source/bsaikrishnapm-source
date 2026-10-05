@@ -1,0 +1,674 @@
+{
+  "schema_version": 1,
+  "name": "Support assistant / sparse synthetic replay",
+  "cases": [
+    {
+      "id": "case-01",
+      "segment": "Account access",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-02",
+      "segment": "Account access",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-03",
+      "segment": "Account access",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-04",
+      "segment": "Account access",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-05",
+      "segment": "Account access",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-06",
+      "segment": "Account access",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-07",
+      "segment": "Account access",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-08",
+      "segment": "Account access",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-09",
+      "segment": "Billing",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-10",
+      "segment": "Billing",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-11",
+      "segment": "Billing",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-12",
+      "segment": "Billing",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-13",
+      "segment": "Billing",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-14",
+      "segment": "Billing",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-15",
+      "segment": "Billing",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-16",
+      "segment": "Billing",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-17",
+      "segment": "Knowledge lookup",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-18",
+      "segment": "Knowledge lookup",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-19",
+      "segment": "Knowledge lookup",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-20",
+      "segment": "Knowledge lookup",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-21",
+      "segment": "Knowledge lookup",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-22",
+      "segment": "Knowledge lookup",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-23",
+      "segment": "Knowledge lookup",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    },
+    {
+      "id": "case-24",
+      "segment": "Knowledge lookup",
+      "allowed_tools": [
+        "search",
+        "lookup",
+        "refund"
+      ],
+      "approval_required_tools": [
+        "refund"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "case_id": "case-01",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1800,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-01",
+      "variant": "candidate",
+      "success": true,
+      "cost_usd": 0.018,
+      "latency_ms": 1200,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-02",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1810,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-03",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1820,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-04",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1830,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-05",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1840,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-06",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1850,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-07",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1860,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-08",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1870,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-09",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1880,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-09",
+      "variant": "candidate",
+      "success": true,
+      "cost_usd": 0.018,
+      "latency_ms": 1280,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-10",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1890,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-11",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1900,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-12",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1910,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-13",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1920,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-14",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1930,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-15",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1940,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-16",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1950,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-17",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1960,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-17",
+      "variant": "candidate",
+      "success": true,
+      "cost_usd": 0.018,
+      "latency_ms": 1360,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-18",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1970,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-19",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1980,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-20",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 1990,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-21",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 2000,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-22",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 2010,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-23",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 2020,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    },
+    {
+      "case_id": "case-24",
+      "variant": "baseline",
+      "success": true,
+      "cost_usd": 0.025,
+      "latency_ms": 2030,
+      "actions": [
+        {
+          "tool": "search",
+          "executed": true,
+          "approved": false
+        }
+      ]
+    }
+  ]
+}
