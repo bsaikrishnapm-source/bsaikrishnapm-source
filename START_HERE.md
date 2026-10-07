@@ -1,54 +1,66 @@
-# Start here — interactive PM product demos
+# Try the portfolio
 
-These independent prototypes demonstrate product decisions through working local browser experiences. Each repository also retains its original Python analysis and product documents.
+[Profile](README.md) · [All projects](PORTFOLIO.md) · [Roadmap](ROADMAP.md)
 
-## New: AgentTrace — AI agent evaluation
+## Pick an experience
 
-Download this profile repository as a ZIP, extract it, and open **projects/agenttrace/index.html**. Start with the unsafe candidate, inspect Billing and the two tool-policy violations, then switch to the clean and missing-coverage scenarios. Adjust review thresholds, import a JSON dataset or export the review memo. No server or API key is required. Data resets on reload.
-
-[Project overview](projects/agenttrace) · [Validation](projects/agenttrace/VALIDATION.md)
-
-## New: Project Sentinel — working PM monitoring software
-
-1. Download this profile repository as a ZIP and extract it.
-2. Open a terminal in `projects/project-sentinel`.
-3. Run `python3 app.py` (Windows: `py -3 app.py`).
-4. Open **http://127.0.0.1:8765** on that computer.
-
-Create your baseline, update work, inspect alerts and export a status brief. The background monitor runs while the Python process is active. [Laptop setup](projects/project-sentinel/LAPTOP_SETUP.md) · [Screenshot](projects/project-sentinel/assets/dashboard.jpg) · [Validation](projects/project-sentinel/VALIDATION.md).
-
-## Open the earlier browser demos without coding
-
-1. Open a repository from the table below.
-2. Select the green **Code** button, then **Download ZIP**.
-3. Extract the ZIP.
-4. Open the extracted **demo/index.html** file in your browser.
-
-Keep the demo folder's files together. No API key, account, terminal or software installation is needed to use the demo. GitHub itself displays the HTML source; it does not host these interfaces as live websites.
-
-| Product | Repository | Workflow to try |
+| Start here if you want to… | Project | Requirements |
 | --- | --- | --- |
-| Evidence Review | [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Retrieve → revoke access → reopen a source; compare structured conflicting policies |
-| Approval Inbox | [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Submit → approve → simulate execution → retry; test changed payload and expiry |
-| AI Economics | [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Adjust volume, cost and quality gates; inspect eligibility and export CSV |
-| Triage Console | [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Compare urgency override with baseline; inspect T18 and confirm a queue |
-| Activation Analytics | [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) | Validate events, inject duplicates and missing signup, compare eligible cohort funnels |
-| Investment Planner | [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Change capacity, reserve and estimates; inspect selection/deferral explanations |
+| Inspect project risk and update ongoing work | [Project Sentinel](#project-sentinel) | Python 3.10+ and a browser |
+| Compare AI agent run records | [AgentTrace](#agenttrace) | A browser |
+| Review release gates and dependencies | [API Launch Readiness](#api-launch-readiness) | A browser |
 
-## New: API Launch Readiness Console
+These links lead to source code and documentation. The applications run on your computer; they are not hosted live demos.
 
-Download **this profile repository** as a ZIP, extract it, and open **projects/api-launch-readiness/demo/index.html**. Start with the blocked release, switch to Pilot candidate, then clear all gates. Remove an evidence note to see why a reported pass is insufficient. Export the current decision to CSV.
+## Download once
+
+For the three projects above, open [this repository](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source), select **Code → Download ZIP**, and extract the archive. Keep each project's files together.
+
+## Project Sentinel
+
+1. Open a terminal in the extracted `projects/project-sentinel` folder.
+2. Run `python3 app.py` on macOS/Linux or `py -3 app.py` on Windows.
+3. Open **http://127.0.0.1:8765** in a browser on the same computer.
+
+**Try this:** Inspect the Atlas sample, open an alert's evidence, acknowledge it, update the underlying work, and review the resulting alert state. Compare it with the healthy Pulse sample. Export a status brief.
+
+Projects and alert history persist in local SQLite storage. Monitoring runs while the Python process and computer remain active. Stop the server with **Ctrl+C**.
+
+[Detailed laptop setup](projects/project-sentinel/LAPTOP_SETUP.md) · [Screenshot](projects/project-sentinel/assets/dashboard.jpg) · [Validation](projects/project-sentinel/VALIDATION.md)
+
+## AgentTrace
+
+Open `projects/agenttrace/index.html` from the extracted folder.
+
+**Try this:** Start with the risky candidate. Inspect Billing and the two tool-policy violations. Switch to the clean candidate, then the missing-coverage scenario. Adjust thresholds and export a review memo.
+
+No server or API key is required. Dataset and policy changes reset on refresh unless exported. The optional CLI requires Node.js 20+; see the project README.
+
+[Project overview](projects/agenttrace) · [Validation and browser checks still pending](projects/agenttrace/VALIDATION.md)
+
+## API Launch Readiness
+
+Open `projects/api-launch-readiness/demo/index.html`.
+
+**Try this:** Compare the blocked, pilot, and ready scenarios. Remove an evidence note to inspect how a missing requirement affects the decision. Export a CSV decision record.
 
 [Project overview](projects/api-launch-readiness) · [Validation](projects/api-launch-readiness/VALIDATION.md)
 
-## What reviewers can inspect
+## Explore the other six demos
 
-Each repository includes a **DEMO_GUIDE.md** explaining the workflow, architecture and trade-offs, **VALIDATION.md** recording actual checks, and **test_demo.cjs** with executable decision tests.
+Download and extract each linked repository, then open its `demo/index.html`. No API key or terminal is needed for these browser demos.
 
-**Original six-project verification:** 45 new Node behavioral tests passed across the six decision engines. All six original Python entry points completed against their original baselines. Browser script syntax was checked. The local interfaces have not been visually or accessibility-tested in this environment; validation reports keep those manual checks open.
+| Project | Workflow to explore |
+| --- | --- |
+| [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Retrieve evidence, revoke access, and compare conflicting policies |
+| [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Submit, approve, simulate execution, then test changed payloads and expiry |
+| [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Change cost and quality assumptions, compare eligibility, and export |
+| [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Compare urgency overrides, inspect ticket reasons, and confirm a queue |
+| [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) | Validate events and compare segmented activation funnels |
+| [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Change capacity and estimates, then inspect selection and deferral reasons |
+
+Each standalone repository includes a walkthrough and validation record. These earlier browser demos reset on refresh.
 
 ## Scope
 
-All examples are synthetic. Approvals, roles, evidence permissions, ticket assignments and audit records are local simulations. No customer systems, payments, real-model APIs or private data are connected. The earlier browser demos reset on refresh. Project Sentinel persists projects and alert states in local SQLite storage. Explicit downloads are retained by your browser.
-
-The Projects board is a delivery tracker. Adding an issue to it does not create a feature or launch a demo. Completed implementations and remaining production work are tracked in the [portfolio roadmap](ROADMAP.md).
+Bundled examples are synthetic. Core workflows do not connect to customer systems or call model APIs. Permissions, approvals, and assignments in the browser demos are simulations. Exported files are saved through your browser. See each project's validation record for tested behavior and remaining checks.

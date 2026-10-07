@@ -1,45 +1,58 @@
 # Sai Krishna Banda
-### Product Manager · Enterprise AI · API Platforms · Product Analytics
+### Product Management · Enterprise AI · API Platforms
 
-I translate complex workflows into clear product decisions: what to build, how to measure it, and when it is ready to launch.
+I build working prototypes that make complex product decisions easier to inspect: **what to prioritize, when to intervene, and what evidence a release needs.**
 
-My work combines product strategy, technical fluency, and cross-functional delivery. This portfolio makes the reasoning inspectable through working code, decision memos, and explicit trade-offs.
+My portfolio connects product requirements and trade-offs with runnable software, test cases, and decision memos.
 
-[LinkedIn](https://www.linkedin.com/in/saibanda) · [Email](mailto:bsaikrishna.pm@gmail.com) · [Try the demos locally](START_HERE.md) · [Portfolio index](PORTFOLIO.md)
+[LinkedIn](https://www.linkedin.com/in/saibanda) · [Email](mailto:bsaikrishna.pm@gmail.com) · [Explore all nine projects](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/PORTFOLIO.md) · [Run a demo](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/START_HERE.md)
 
-## Featured work
+## Selected projects
 
-| Case study | The decision | What to review |
-| --- | --- | --- |
-| **[AgentTrace](projects/agenttrace)** — New | Should an AI-agent change advance to human release review? | Paired evaluations, tool-policy checks, segment regressions, editable review gates and exported decision memos. [Product brief](projects/agenttrace/PRODUCT.md) · [Validation](projects/agenttrace/VALIDATION.md) |
-| **[Project Sentinel](projects/project-sentinel)** — New flagship | Where is an ongoing project drifting from its plan, and what should the PM do next? | A working local dashboard with baseline tracking, persistent alerts, automatic monitoring, editing forms, and optional local AI briefs. [Screenshot](projects/project-sentinel/assets/dashboard.jpg) · [Validation](projects/project-sentinel/VALIDATION.md) |
-| **[AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab)** | Which approach meets quality and latency requirements at an acceptable cost? | Configurable assumptions, guided scenarios, comparison history, and exports. [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md) |
-| **[Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption)** | Where should the team focus its next onboarding experiment? | Event validation, activation definitions, segmented funnels, and an experiment plan. [Experiment](https://github.com/bsaikrishnapm-source/workflow-adoption/blob/main/EXPERIMENT.md) |
+### Project Sentinel — spot delivery risk after kickoff
+
+A local monitoring application for product managers tracking progress against the original project baseline. It brings delivery drift, scope growth, blocked dependencies, and overdue decisions into one workspace.
+
+**Key product decision:** Preserve the original commitment. Each alert connects evidence to an owner and a suggested action; acknowledgement and resolution are separate states.
+
+[![Project Sentinel dashboard showing delivery progress and evidence-linked risk alerts using synthetic data](https://raw.githubusercontent.com/bsaikrishnapm-source/bsaikrishnapm-source/main/projects/project-sentinel/assets/dashboard.jpg)](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/project-sentinel)
+
+[Explore the project](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/project-sentinel) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/PRODUCT.md) · [Run locally](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/LAPTOP_SETUP.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/VALIDATION.md)
+
+Python · SQLite · JavaScript | Recorded validation: **39 Python tests and 10 browser workflow checks passed.**
+
+### AgentTrace — evaluate an AI agent change before release review
+
+A browser workbench that compares recorded baseline and candidate runs. Review success, latency, cost, segment regressions, tool permissions, and required approvals, then export a decision memo.
+
+**Key product decision:** A better average cannot compensate for an executed unauthorized action or missing segment coverage. The strongest verdict is ready for human review.
+
+[Explore the project](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/agenttrace) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/PRODUCT.md) · [Data contract](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/DATA_CONTRACT.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/VALIDATION.md)
+
+JavaScript · Node.js · JSON | Recorded validation: **18 engine tests, three CLI scenarios, and DOM checks passed.** Real-browser validation remains pending.
 
 ## More product decisions
 
-| Project | Product management focus |
-| --- | --- |
-| [API Launch Readiness Console](projects/api-launch-readiness) | Release gates, ownership, dependency checks, and go/no-go review |
-| [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Prioritization under capacity constraints, dependencies, and investment rationale |
-| [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Evidence permissions, policy conflicts, and human review |
-| [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Approval boundaries, expiry, and exact-action checks |
-| [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Automation thresholds, urgent-case overrides, and escalation |
+| Focus | Project | What to inspect |
+| --- | --- | --- |
+| AI unit economics | [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Cost, quality, and latency trade-offs under configurable assumptions |
+| Product analytics | [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) | Activation definitions, segmented funnels, and an experiment plan |
+| Platform delivery | [API Launch Readiness](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/api-launch-readiness) | Release gates, dependencies, ownership, and evidence |
+| Prioritization | [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Investment choices under capacity and dependency constraints |
+| AI governance | [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Evidence permissions, conflicting policies, and human review |
+| Agent controls | [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Approval boundaries, expiry, and exact-action checks |
+| Automation policy | [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Routing thresholds, urgent-case overrides, and escalation |
 
-## Review in three minutes
+## How to review my work
 
-1. **Understand the decision:** Pick a featured project and read its problem and recommendation.
-2. **Inspect the experience:** Follow the [local demo guide](START_HERE.md); no API keys are required.
-3. **Examine the evidence:** Read its tests, validation notes, and documented limitations.
+1. **Start with the problem:** Read a project's product brief and the decision it supports.
+2. **Try the workflow:** Follow the [demo guide](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/START_HERE.md); core demos need no API key.
+3. **Challenge the evidence:** Inspect its tests, assumptions, and validation limits.
 
-## How I approach product work
+My approach: frame the problem → define the outcome → compare trade-offs → build a testable prototype → document the next decision.
 
-**Frame the problem → define the outcome → compare trade-offs → build a testable prototype → document the next decision.**
-
-The artifacts cover requirements, success metrics, release gates, experiment design, and delivery planning. Runnable implementations make the assumptions easier to challenge.
-
-[Portfolio roadmap](ROADMAP.md) · [Planning board](https://github.com/users/bsaikrishnapm-source/projects/1)
+[Portfolio index](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/PORTFOLIO.md) · [Development roadmap](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/ROADMAP.md)
 
 ---
 
-**Evidence and authorship:** These are independent, AI-assisted prototypes using synthetic data. They are not employer deployments or measured customer outcomes. Real user research and production integrations are not claimed. Validation is documented per project; a working simulation does not establish production readiness.
+**About this work:** Independent, AI-assisted portfolio projects using synthetic examples. Validation records describe implementation checks, not customer impact. These projects do not establish production readiness; user research and live integrations remain future work. Project Sentinel's optional local AI adapter has only been tested with mocked model responses.

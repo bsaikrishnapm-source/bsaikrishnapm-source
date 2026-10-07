@@ -1,55 +1,46 @@
-# Product Portfolio
+# Product portfolio
 
-Nine decision-focused case studies with browser demos and local monitoring software covering enterprise SaaS, AI workflows, product delivery and analytics.
+Nine independent projects exploring AI evaluation, delivery management, platform decisions, and product analytics.
 
-**[Start here: open the product demos without coding](START_HERE.md)**
+[Profile](README.md) · [Run the demos](START_HERE.md) · [Roadmap](ROADMAP.md)
 
-| Project | Read first | Decision | Evidence |
-| --- | --- | --- | --- |
-| Ticket routing | [Case study](https://github.com/bsaikrishnapm-source/ticket-routing) | Keep a proposed auto-routing policy out of production | 20 synthetic labeled cases; high-confidence errors and an urgent miss |
-| Workflow adoption | [Case study](https://github.com/bsaikrishnapm-source/workflow-adoption) | Test guided connector setup before broader onboarding redesign | 40 synthetic account journeys; segment-level drop-offs |
-| Roadmap investment | [Case study](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Fund auditability, connector recovery, and routing assistance | Eight scored opportunities; dependencies and fixed capacity |
+## Choose a project by the decision
 
-## AgentTrace — AI agent evaluation
+| Project | Product question | Review first |
+| --- | --- | --- |
+| **[Project Sentinel](projects/project-sentinel)** | Where is delivery drifting from the kickoff baseline, and who should act? | [Product brief](projects/project-sentinel/PRODUCT.md) · [Dashboard](projects/project-sentinel/assets/dashboard.jpg) |
+| **[AgentTrace](projects/agenttrace)** | Should an agent change advance to human release review? | [Product brief](projects/agenttrace/PRODUCT.md) · [Data contract](projects/agenttrace/DATA_CONTRACT.md) |
+| [API Launch Readiness](projects/api-launch-readiness) | Is there enough evidence to advance a platform release? | [Product brief](projects/api-launch-readiness/PRODUCT.md) · [Decision log](projects/api-launch-readiness/DECISIONS.md) |
+| [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Which approach meets quality and latency needs at an acceptable cost? | [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md) |
+| [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) | Where should the next onboarding experiment focus? | [Experiment plan](https://github.com/bsaikrishnapm-source/workflow-adoption/blob/main/EXPERIMENT.md) |
+| [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | What should the team fund within limited capacity? | Repository case study and interactive planner |
+| [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Which evidence may an assistant use? | Repository requirements and evidence-review demo |
+| [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | When should an action require human approval? | Repository requirements and approval simulator |
+| [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Where should automation stop and escalation begin? | Repository case study and triage demo |
 
-[AgentTrace](projects/agenttrace) compares recorded baseline and candidate runs, checks tool permissions and approvals, exposes segment regressions, and exports an explicit review recommendation. Includes three synthetic scenarios, a browser dashboard, JSON import/export, command-line evaluation, product brief and data contract. **18 engine tests and three CLI scenario checks passed; browser validation is pending.** [Validation](projects/agenttrace/VALIDATION.md).
+## Implementation evidence
 
-## Project Sentinel — new flagship
+These are recorded checks from the implementation work, not fresh test runs or business outcomes.
 
-Built from my idea for a PM early warning system after kickoff: [Project Sentinel](projects/project-sentinel) compares delivery with its original baseline and suggests evidence-linked next steps. It includes project creation, task/evidence editors, risk checks, persistent alerts, automatic scans and optional local AI briefing. **39 Python tests and 10 real-browser workflow checks passed.** [Product brief](projects/project-sentinel/PRODUCT.md) · [Screenshot](projects/project-sentinel/assets/dashboard.jpg) · [Laptop setup](projects/project-sentinel/LAPTOP_SETUP.md).
+| Project group | Recorded verification | Remaining verification |
+| --- | --- | --- |
+| Project Sentinel | 39 Python tests; 10 real-browser workflow checks; desktop and mobile screenshot inspection | Full accessibility audit, cross-browser coverage, laptop deployment, and real-model inference |
+| AgentTrace | 18 Node engine tests; three CLI scenarios; DOM integration checks | Real-browser layout, downloads, and accessibility |
+| API Launch Readiness | 12 automated engine tests | Browser rendering, exports, and accessibility |
+| Original six standalone repositories | 45 Node decision tests; six Python baseline entry points | Browser rendering and accessibility |
 
-## API platform launch planning
+Detailed records: [Sentinel](projects/project-sentinel/VALIDATION.md) · [AgentTrace](projects/agenttrace/VALIDATION.md) · [API Launch Readiness](projects/api-launch-readiness/VALIDATION.md). Each standalone repository also includes a validation record.
 
-[API Launch Readiness Console](projects/api-launch-readiness) adds a release-management case study: seven editable gates, dependency-aware evaluation, critical blockers, scenario comparison through presets, and a decision CSV. Includes a [product brief](projects/api-launch-readiness/PRODUCT.md), [decision log](projects/api-launch-readiness/DECISIONS.md), and [validation record](projects/api-launch-readiness/VALIDATION.md).
+## Where the code lives
 
-## AI product prototypes
+Project Sentinel, AgentTrace, and API Launch Readiness live in this repository's `projects/` directory. The other six projects live in the separate repositories linked above. Each runs independently.
 
-- [Permission Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval): five fictional documents, eight labeled queries, a working retrieval policy, and product requirements.
-- [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals): ten policy scenarios, a working state-decision simulator, and approval requirements.
-- [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab): three populated variants, an executable cost model, and sensitivity analysis.
-
-These broaden the portfolio into retrieval governance, agent action controls, and AI unit economics. Each script uses only Python's standard library and runs independently.
-
-## Read this portfolio in ten minutes
-
-1. Read each project’s recommendation and limitations.
-2. Open its supporting product artifacts to inspect the trade-offs.
-3. Clone the project repository and follow its README run instructions to reproduce its analysis.
+Project Sentinel uses a local Python server and SQLite. AgentTrace and API Launch Readiness open as local browser files. The original six browser demos live under `demo/index.html` in their respective repositories.
 
 ## Evidence and authorship
 
-Prepared with AI assistance as independent portfolio demonstrations. All datasets and business inputs were deliberately constructed for these scenarios. No interviews, customer deployments, model API calls, or business-impact experiments were performed. The ticket-routing scores are hypothetical classifier inputs, not measured model outputs. The original analyses verify calculations and decision rules without calling AI models. Project Sentinel adds an optional local-model adapter; its tests used mocked responses and no real-model inference result is claimed.
+These are independent, AI-assisted portfolio demonstrations using constructed data and assumptions. No customer interviews, business-impact experiments, or employer deployments are claimed. Ticket-routing scores are hypothetical classifier inputs, not measured model outputs.
 
-No employment details or employer performance percentages are used as portfolio evidence.
+Core evaluations use explicit rules. Project Sentinel offers an optional local-model adapter, tested with mocked responses; no successful live-model evaluation is claimed. AgentTrace evaluates imported run records and does not execute or independently grade an AI model.
 
-## Delivery status
-
-The original implementation pass delivered six browser demos, six case studies, supporting product documents, synthetic datasets, Python baseline analyses and 45 new Node decision tests. Each demo has a walkthrough and validation record. UI rendering and accessibility checks remain unperformed here. Proposed experiments and production services remain explicitly separate from delivered local behavior.
-
-## Repository structure
-
-The original six projects live in the separate repositories linked above. The seventh, API Launch Readiness Console, is a self-contained project under `projects/api-launch-readiness` in this repository. Each project runs independently. Project Sentinel is the eighth case study, under `projects/project-sentinel`, and runs as a local Python server.
-
-
-
-AgentTrace is the ninth case study, under `projects/agenttrace`, and opens directly in a browser. Its Node CLI has no third-party dependencies.
+The product briefs separate implemented behavior from proposed discovery, experiments, integrations, and production controls.

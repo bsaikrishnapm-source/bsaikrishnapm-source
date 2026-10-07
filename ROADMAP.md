@@ -1,14 +1,14 @@
 # Enterprise AI Portfolio — Product Roadmap
 
-[Open the six demos](START_HERE.md) · [Profile](README.md) · [GitHub Projects board](https://github.com/users/bsaikrishnapm-source/projects/1)
+[Run the demos](START_HERE.md) · [Profile](README.md) · [GitHub Projects board](https://github.com/users/bsaikrishnapm-source/projects/1)
 
 ## Product goal
 
 Make enterprise product decisions inspectable: what evidence an assistant may use, which actions need approval, when automation should stop, and what to fund within limited capacity.
 
-All six repositories now include a local browser interface, decision engine, behavioral tests, walkthrough and validation report. Original Python analyses remain available. All records and model assumptions are synthetic.
+The original six standalone repositories include a local browser interface, decision engine, behavioral tests, walkthrough and validation report. Original Python analyses remain available. All records and model assumptions are synthetic.
 
-## Implemented demos
+## Original six standalone demos
 
 | Product | Implemented experience | New decision tests |
 | --- | --- | --- |
@@ -21,7 +21,7 @@ All six repositories now include a local browser interface, decision engine, beh
 
 **45 new decision tests passed.** All six original Python entry points also passed their baseline checks. Browser rendering/accessibility have not been verified here; each VALIDATION.md lists remaining manual checks.
 
-## Backlog status — three completed, six open
+## Recorded implementation backlog
 
 | Issue | Status | Remaining boundary |
 | --- | --- | --- |
@@ -55,11 +55,11 @@ Close issues only when their declared scope is met. Partial demo implementations
 
 ## Definition of done
 
-A change has an understandable user outcome, reproducible verification, documented failure cases, updated run instructions and explicit evidence boundaries. Current validation reports do not claim completed visual, accessibility or independent security reviews.
+A change has an understandable user outcome, reproducible verification, documented failure cases, updated run instructions and explicit evidence boundaries. Validation is tracked per project. Project Sentinel has recorded browser and visual checks; a full accessibility audit and independent security review remain open.
 
-## Board status
+## Board synchronization
 
-The user's last screenshot showed the four retrieval issues on the board in Todo. Repository code and issue status have been updated through the GitHub connection. Native board fields and membership were not edited; they may need to be synchronized with the table above.
+The table above records the earlier implementation pass. Live issue status and Projects board fields may differ; consult the linked issues before planning new work.
 
 ## New delivery — API Launch Readiness Console
 
@@ -72,5 +72,19 @@ Next: conduct usability sessions with platform PMs, assess gate completeness wit
 
 Published the [PM project-monitoring application](projects/project-sentinel), based on Sai's idea to detect delivery problems after kickoff. Delivered baseline protection, drift detection, project/task/evidence forms, persistent acknowledgement and resolution, scheduled checks, JSON ingestion/export and optional local AI briefs. Validation: **39 Python tests and 10 browser workflow checks passed**, including a mobile overflow fix.
 
-Next deployment step: confirm the old laptop's OS and resources, run the local application there, and select an authenticated private access method. Remote connection and hosting have not been configured. Direct project-system connectors, outbound notifications, approved rebaseline workflow and real-user validation remain open.
+Next deployment step: confirm the target laptop's OS and resources, run the local application there, and select an authenticated private access method. Remote connection and hosting have not been configured. Direct project-system connectors, outbound notifications, approved rebaseline workflow and real-user validation remain open.
 
+## AgentTrace — agent evaluation workbench
+
+Delivered [baseline/candidate comparison](projects/agenttrace), segment checks, tool-policy checks, editable thresholds, JSON imports/exports, and Markdown review memos. Recorded validation: **18 engine tests, three CLI scenarios, and DOM integration checks passed**. Real-browser checks remain pending; see the [validation record](projects/agenttrace/VALIDATION.md).
+
+Next: complete browser and accessibility checks, validate the data contract with real trace exports, and observe PM/evaluation-owner review workflows. Statistical confidence, authenticated approval evidence, and live agent integrations remain future work. There is no automatic release action.
+
+## Current portfolio priorities
+
+1. Complete outstanding browser checks for AgentTrace and API Launch Readiness.
+2. Run Project Sentinel on the intended laptop and document the deployment.
+3. Collect feedback from product managers using realistic, sanitized workflows.
+4. Use that evidence to choose the next integration or product improvement.
+
+These priorities are proposed next steps, not completed deployments or user studies.
