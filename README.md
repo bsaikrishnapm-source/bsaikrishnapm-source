@@ -7,6 +7,8 @@ My portfolio connects product requirements and trade-offs with runnable software
 
 [LinkedIn](https://www.linkedin.com/in/saibanda) · [Email](mailto:bsaikrishna.pm@gmail.com) · [Explore all nine projects](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/PORTFOLIO.md) · [Run a demo](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/START_HERE.md)
 
+**[Five-minute reviewer guide](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/REVIEWER_GUIDE.md)** · [Automated check results](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/actions/workflows/verify.yml)
+
 ## Selected projects
 
 ### Project Sentinel — spot delivery risk after kickoff
@@ -42,6 +44,10 @@ JavaScript · Node.js · JSON | Recorded validation: **18 engine tests, three CL
 | AI governance | [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Evidence permissions, conflicting policies, and human review |
 | Agent controls | [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Approval boundaries, expiry, and exact-action checks |
 | Automation policy | [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Routing thresholds, urgent-case overrides, and escalation |
+
+## Reproduce the core checks
+
+With Python 3.10+ and Node.js 20+ installed, run `python3 scripts/verify.py` from the repository root. This checks the three projects in this repository, including engine behavior, Sentinel HTTP workflows, and AgentTrace CLI verdicts. [Verification scope](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/CONTRIBUTING.md).
 
 ## How to review my work
 
