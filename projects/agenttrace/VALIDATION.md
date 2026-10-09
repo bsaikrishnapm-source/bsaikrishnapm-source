@@ -31,3 +31,11 @@ To reproduce the DOM checks separately: `npm install --no-save jsdom`, then `nod
 ## Interpretation
 
 These checks establish deterministic behavior on constructed cases. They do not establish model quality, production safety, statistical significance or customer value. Sample case contracts and outcome labels were authored for this project. No live AI models or external customer systems were used.
+
+## Policy portability update — 2026-10-09
+
+Added applied-policy JSON download, validated policy import, and default reset. DOM regression checks cover strict-policy application, form synchronization, rejected imports preserving the active policy, malformed JSON, missing/extra fields, invalid values, size limits, exporting applied values despite unsaved edits, and export/import round-trip.
+
+These checks use jsdom with mocked file selection and download triggers. They inspect the generated Blob contents but do not establish real-browser download, layout, or accessibility behavior. A fresh Chromium download attempt again failed with an invalid ZIP response.
+
+Update verification: the expanded DOM integration runner passed. The repository verification runner passed all 69 existing automated tests and all three CLI scenario checks. No real-browser pass is claimed for the new controls.

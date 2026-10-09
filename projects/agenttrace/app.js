@@ -21,9 +21,28 @@ function error(e){$('error').textContent=e.message;$('error').hidden=false;}
 function clearError(){$('error').hidden=true;}
 function download(name,text,type){const u=URL.createObjectURL(new Blob([text],{type})),a=el('a','');a.href=u;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);}
 $('scenario').addEventListener('change',()=>{data=agentTraceSample($('scenario').value);clearError();render();});
-$('policy').addEventListener('submit',e=>{e.preventDefault();try{const p=Object.fromEntries([...new FormData(e.target)].map(([k,v])=>[k,Number(v)]));AgentTrace.evaluate(data,p);settings=p;clearError();render();}catch(e){error(e);}});
+$('policy').addEventListener('submit',e=>{e.preventDefault();try{const p=Object.fromEntries([...new FormData(e.target)].map(([k,v])=>[k,Number(v)]));AgentTrace.evaluate(data,p);settings=p;clearError();render();$('policy-status').textContent='Edited policy applied. Download it to reproduce this review.';}catch(e){error(e);}});
 $('import').addEventListener('change',async e=>{try{const f=e.target.files[0];if(!f)return;if(f.size>5*1024*1024)throw new Error('Import is limited to 5 MB.');const next=JSON.parse(await f.text());AgentTrace.evaluate(next,settings);data=next;clearError();render();}catch(e){error(e);}finally{e.target.value='';}});
 $('filter').addEventListener('change',renderTraces);
 $('export').addEventListener('click',()=>download('agenttrace-review.md',AgentTrace.memo(result),'text/markdown'));
 $('template').addEventListener('click',()=>download('agenttrace-dataset.json',JSON.stringify(data,null,2),'application/json'));
 render();
+
+function applySavedPolicy(next,message){
+ if(!next||typeof next!=='object'||Array.isArray(next))throw new Error('Policy must be a JSON object.');
+ const keys=Object.keys(AgentTrace.defaults);
+ if(Object.keys(next).length!==keys.length||keys.some(k=>!Object.prototype.hasOwnProperty.call(next,k)))throw new Error('Policy must contain exactly the six documented threshold fields.');
+ AgentTrace.evaluate(data,next);
+ settings={...next};
+ for(const key of keys)$('policy').elements.namedItem(key).value=settings[key];
+ clearError();render();$('policy-status').textContent=message;
+}
+$('policy-export').addEventListener('click',()=>download('agenttrace-policy.json',JSON.stringify(settings,null,2),'application/json'));
+$('policy-reset').addEventListener('click',()=>applySavedPolicy({...AgentTrace.defaults},'Default policy restored and applied.'));
+$('policy-import').addEventListener('change',async e=>{
+ try{
+  const file=e.target.files[0];if(!file)return;
+  if(file.size>16384)throw new Error('Policy import is limited to 16 KB.');
+  applySavedPolicy(JSON.parse(await file.text()),'Imported policy applied. Review its thresholds before using the recommendation.');
+ }catch(e){error(e);}finally{e.target.value='';}
+});

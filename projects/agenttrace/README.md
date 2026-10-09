@@ -31,6 +31,18 @@ No installation, API key, server or model download is required for the dashboard
 - Export the loaded dataset and a Markdown review memo containing the active policy and findings.
 - Run the same evaluator from the command line for repeatable review.
 
+## Save and reuse a review policy
+
+Apply your thresholds, then select **Download applied policy**. The JSON contains the six thresholds used in the current assessment; unsaved form edits are excluded.
+
+Use **Import and apply policy JSON** to restore the same thresholds in another session. Imports must include all six documented fields, reject unknown or invalid fields, and are limited to 16 KB. A rejected import keeps the current assessment and policy intact. **Reset to default policy** restores and applies the illustrative defaults.
+
+Save the dataset and policy together to reproduce a review. The exported policy also works with the CLI:
+
+```sh
+node cli.js examples/clean.json agenttrace-policy.json
+```
+
 ## Tests and command-line review
 
 Requires Node.js 20+ for tests and CLI; there are no npm dependencies.
