@@ -1,64 +1,77 @@
 # Sai Krishna Banda
-### Product Management · Enterprise AI · API Platforms
+**Product Management · Enterprise AI · API Platforms**
 
-I build working prototypes that make complex product decisions easier to inspect: **what to prioritize, when to intervene, and what evidence a release needs.**
+I turn complex workflows into clear product decisions—and build working prototypes to test the assumptions behind them.
 
-My portfolio connects product requirements and trade-offs with runnable software, test cases, and decision memos.
+Explore my work in delivery monitoring, AI evaluation, and platform readiness. Each project connects a user problem with product requirements, explicit trade-offs, and inspectable evidence.
 
-[LinkedIn](https://www.linkedin.com/in/saibanda) · [Email](mailto:bsaikrishna.pm@gmail.com) · [Explore all nine projects](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/PORTFOLIO.md) · [Run a demo](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/START_HERE.md)
+[LinkedIn](https://www.linkedin.com/in/saibanda) · [Email](mailto:bsaikrishna.pm@gmail.com) · [All nine projects](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/PORTFOLIO.md) · [Five-minute review](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/REVIEWER_GUIDE.md)
 
-**[Five-minute reviewer guide](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/REVIEWER_GUIDE.md)** · [Automated check results](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/actions/workflows/verify.yml)
+## Selected work
 
-## Selected projects
+### 01 / Project Sentinel
+**Help product managers spot delivery risk after kickoff.**
 
-### Project Sentinel — spot delivery risk after kickoff
+A local dashboard that compares ongoing work with the original project baseline. It brings progress, scope, dependencies, spending, and overdue decisions into one review.
 
-A local monitoring application for product managers tracking progress against the original project baseline. It brings delivery drift, scope growth, blocked dependencies, and overdue decisions into one workspace.
+**Product judgment:** Keep the original commitment visible. Connect each alert to evidence, an accountable owner, and a next step. Track acknowledgement separately from resolution.
 
-**Key product decision:** Preserve the original commitment. Each alert connects evidence to an owner and a suggested action; acknowledgement and resolution are separate states.
+[![Project Sentinel dashboard with synthetic project data](https://raw.githubusercontent.com/bsaikrishnapm-source/bsaikrishnapm-source/main/projects/project-sentinel/assets/dashboard.jpg)](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/project-sentinel)
 
-[![Project Sentinel dashboard showing delivery progress and evidence-linked risk alerts using synthetic data](https://raw.githubusercontent.com/bsaikrishnapm-source/bsaikrishnapm-source/main/projects/project-sentinel/assets/dashboard.jpg)](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/project-sentinel)
+[Explore Sentinel](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/project-sentinel) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/PRODUCT.md) · [Run locally](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/LAPTOP_SETUP.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/VALIDATION.md)
 
-[Explore the project](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/project-sentinel) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/PRODUCT.md) · [Run locally](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/LAPTOP_SETUP.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/VALIDATION.md)
+### 02 / AgentTrace
+**Make AI agent release reviews more reproducible.**
 
-Python · SQLite · JavaScript | Recorded validation: **39 Python tests and 10 browser workflow checks passed.**
+Compare recorded baseline and candidate runs across success, cost, latency, and customer segments. Inspect tool-policy violations, save evaluation thresholds, and export a review memo.
 
-### AgentTrace — evaluate an AI agent change before release review
+**Product judgment:** Evaluate segment regressions and unauthorized actions alongside aggregate performance. Require sufficient evidence and keep the release decision with a person.
 
-A browser workbench that compares recorded baseline and candidate runs. Review success, latency, cost, segment regressions, tool permissions, and required approvals, then export a decision memo.
+[Explore AgentTrace](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/agenttrace) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/PRODUCT.md) · [Data contract](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/DATA_CONTRACT.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/VALIDATION.md)
 
-**Key product decision:** A better average cannot compensate for an executed unauthorized action or missing segment coverage. The strongest verdict is ready for human review.
+### 03 / API Launch Readiness
+**Make release blockers and missing evidence visible.**
 
-[Explore the project](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/agenttrace) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/PRODUCT.md) · [Data contract](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/DATA_CONTRACT.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/VALIDATION.md)
+An interactive console for reviewing release gates, dependencies, accountable teams, and supporting evidence before a go/no-go decision.
 
-JavaScript · Node.js · JSON | Recorded validation: **18 engine tests, three CLI scenarios, and DOM checks passed.** Real-browser validation remains pending.
+**Product judgment:** A reported pass needs evidence. Critical blockers and unresolved dependencies must remain visible in the release recommendation.
 
-## More product decisions
+[Explore the console](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/api-launch-readiness) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/api-launch-readiness/PRODUCT.md) · [Decision log](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/api-launch-readiness/DECISIONS.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/api-launch-readiness/VALIDATION.md)
 
-| Focus | Project | What to inspect |
+## Explore by product question
+
+| Product question | Project |
+| --- | --- |
+| Which AI approach balances quality, latency, and cost? | [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) |
+| Where should the next onboarding experiment focus? | [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) |
+| What should we prioritize within limited capacity? | [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) |
+| Which evidence may an assistant use? | [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) |
+| When should an agent action require approval? | [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) |
+| Where should automation stop and escalation begin? | [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) |
+
+## How I work
+
+**Frame the problem → define the outcome → compare trade-offs → build → evaluate.**
+
+The portfolio demonstrates requirements, prioritization, success metrics, release criteria, and experiment design. Product briefs explain the choices; runnable implementations make the assumptions easier to challenge.
+
+**Try a project:** Follow the [local demo guide](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/START_HERE.md). Core demos need no API key. These GitHub links open source and documentation; the applications run on your computer.
+
+<details>
+<summary><strong>Implementation evidence and verification</strong></summary>
+
+| Project | Recorded checks | Remaining checks |
 | --- | --- | --- |
-| AI unit economics | [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Cost, quality, and latency trade-offs under configurable assumptions |
-| Product analytics | [Workflow Adoption](https://github.com/bsaikrishnapm-source/workflow-adoption) | Activation definitions, segmented funnels, and an experiment plan |
-| Platform delivery | [API Launch Readiness](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/api-launch-readiness) | Release gates, dependencies, ownership, and evidence |
-| Prioritization | [Enterprise Roadmap](https://github.com/bsaikrishnapm-source/enterprise-roadmap) | Investment choices under capacity and dependency constraints |
-| AI governance | [Permission-Aware Retrieval](https://github.com/bsaikrishnapm-source/permission-aware-retrieval) | Evidence permissions, conflicting policies, and human review |
-| Agent controls | [Agent Action Approvals](https://github.com/bsaikrishnapm-source/agent-action-approvals) | Approval boundaries, expiry, and exact-action checks |
-| Automation policy | [Ticket Routing](https://github.com/bsaikrishnapm-source/ticket-routing) | Routing thresholds, urgent-case overrides, and escalation |
+| Project Sentinel | 39 Python tests; 10 browser workflow checks | Full accessibility, cross-browser, and live-model evaluation |
+| AgentTrace | 18 engine tests; three CLI scenarios; DOM interaction checks, including policy import/export | Real-browser layout and downloads |
+| API Launch Readiness | 12 engine tests | Browser workflows and accessibility |
 
-## Reproduce the core checks
+With Python 3.10+ and Node.js 20+, run `python3 scripts/verify.py` from the repository root to reproduce the core checks for these three projects. Browser checks are separate.
 
-With Python 3.10+ and Node.js 20+ installed, run `python3 scripts/verify.py` from the repository root. This checks the three projects in this repository, including engine behavior, Sentinel HTTP workflows, and AgentTrace CLI verdicts. [Verification scope](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/CONTRIBUTING.md).
+[Verification scope](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/CONTRIBUTING.md) · [GitHub Actions](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/actions/workflows/verify.yml) · [Development roadmap](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/ROADMAP.md)
 
-## How to review my work
-
-1. **Start with the problem:** Read a project's product brief and the decision it supports.
-2. **Try the workflow:** Follow the [demo guide](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/START_HERE.md); core demos need no API key.
-3. **Challenge the evidence:** Inspect its tests, assumptions, and validation limits.
-
-My approach: frame the problem → define the outcome → compare trade-offs → build a testable prototype → document the next decision.
-
-[Portfolio index](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/PORTFOLIO.md) · [Development roadmap](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/ROADMAP.md)
+</details>
 
 ---
 
-**About this work:** Independent, AI-assisted portfolio projects using synthetic examples. Validation records describe implementation checks, not customer impact. These projects do not establish production readiness; user research and live integrations remain future work. Project Sentinel's optional local AI adapter has only been tested with mocked model responses.
+**About the portfolio:** Independent, AI-assisted projects using synthetic examples. Test results describe implementation behavior, not customer outcomes or production readiness. User research and production integrations remain future work. Sentinel's optional local AI adapter has been tested with mocked responses; AgentTrace evaluates recorded runs without executing an AI model.
