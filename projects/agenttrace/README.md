@@ -1,17 +1,19 @@
 # AgentTrace
 ### Review an AI agent change through evidence, risk and customer impact.
 
+**[▶ Open AgentTrace live](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/)** · runs in your browser · no install, login or API key · synthetic data
+
 **A working evaluation workbench by Sai Krishna Banda.** Compare baseline and candidate agent runs on the same cases, inspect executed tool actions against a supplied policy, and export a product review memo.
 
 An agent can become cheaper and faster while failing an important customer segment. AgentTrace makes those trade-offs visible before a human release decision.
 
 ## Open the application
 
-1. Download this repository using **Code → Download ZIP** and extract it.
-2. Open `projects/agenttrace/index.html` in a modern browser.
-3. Select a scenario, inspect its findings and expand a case to see the evidence.
+1. **[Open AgentTrace live](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/)** (hosted on GitHub Pages).
+   - Offline alternative: download this repository using **Code → Download ZIP**, extract it and open `projects/agenttrace/index.html`.
+2. Select a scenario, inspect its findings and expand a case to see the evidence.
 
-No installation, API key, server or model download is required for the dashboard. The GitHub page displays source code; it is not a hosted live demo. Data stays in browser memory and resets when the page reloads. Export the dataset before closing if you need a copy.
+No installation, API key, server or model download is required for the dashboard. The live version is a static GitHub Pages site; nothing is uploaded to a server. Data stays in browser memory and resets when the page reloads. Export the dataset before closing if you need a copy.
 
 ## Try these decisions
 
