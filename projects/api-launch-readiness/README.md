@@ -2,6 +2,8 @@
 
 ### Can this integration ship safely—and who owns the remaining gaps?
 
+**[▶ Open the live console](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/)** · runs in your browser · no install, login or API key · synthetic data
+
 A platform PM has seven reported release gates and a deadline. A readiness average looks reassuring, but a failed tenant-isolation check and an untested rollback must stop the launch. This prototype makes that decision explicit.
 
 **Independent portfolio case study by Sai Krishna Banda. All scenarios and evidence are synthetic.**
@@ -20,13 +22,13 @@ Readiness is a weighted checklist score, **not a probability of success or a ris
 
 ## Try it in two minutes
 
-1. Download this repository using **Code → Download ZIP** and extract it.
-2. Open `projects/api-launch-readiness/demo/index.html` in a browser. Keep its neighboring files together.
+1. **[Open the live console](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/)** (hosted on GitHub Pages).
+2. Offline alternative: download this repository using **Code → Download ZIP**, extract it and open `projects/api-launch-readiness/demo/index.html` (keep its neighboring files together).
 3. Load **Pilot candidate**, then raise minimum readiness to **95**. The recommendation changes to HOLD.
 4. Load **Ready for review** and delete the access-check evidence note. Observe the critical blocker and dependent pilot gate.
 5. Export the decision CSV to inspect every gate and its rationale.
 
-No dependencies, server, API keys, or account are required for the demo. GitHub displays HTML source; this is not a hosted application. Edits reset on reload or scenario change.
+No dependencies, server, API keys, or account are required for the demo. The live console is a static GitHub Pages site; nothing is sent to a server. Edits reset on reload or scenario change.
 
 ## Product artifacts
 
