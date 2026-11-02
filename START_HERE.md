@@ -7,14 +7,14 @@
 | Start here if you want to… | Project | Requirements |
 | --- | --- | --- |
 | Inspect project risk and update ongoing work | [Project Sentinel](#project-sentinel) | Python 3.10+ and a browser |
-| Compare AI agent run records | [AgentTrace](#agenttrace) | A browser |
-| Review release gates and dependencies | [API Launch Readiness](#api-launch-readiness) | A browser |
+| Compare AI agent run records | [Open AgentTrace](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/) | A browser; no installation |
+| Review release gates and dependencies | [Open API Launch Readiness](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/) | A browser; no installation |
 
-These links lead to source code and documentation. The applications run on your computer; they are not hosted live demos.
+AgentTrace and API Launch Readiness have live browser demos. Project Sentinel runs on your computer using a local Python server. All bundled scenarios are synthetic.
 
-## Download once
+## Download for local or offline use
 
-For the three projects above, open [this repository](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source), select **Code → Download ZIP**, and extract the archive. Keep each project's files together.
+For Project Sentinel or offline copies of the browser demos, open [this repository](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source), select **Code → Download ZIP**, and extract the archive. Keep each project's files together.
 
 ## Project Sentinel
 
@@ -30,9 +30,9 @@ Projects and alert history persist in local SQLite storage. Monitoring runs whil
 
 ## AgentTrace
 
-Open `projects/agenttrace/index.html` from the extracted folder.
+**[Open AgentTrace in your browser](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/).** For offline use, open `projects/agenttrace/index.html` from the extracted folder.
 
-**Try this:** Start with the risky candidate. Inspect Billing and the two tool-policy violations. Switch to the clean candidate, then the missing-coverage scenario. Adjust thresholds and export a review memo.
+**Try this:** Start with the risky candidate. Inspect Billing and the two tool-policy violations. Switch to the clean candidate, then the missing-coverage scenario. Adjust thresholds and export a review memo. Download the applied policy and dataset to reproduce the review in another session.
 
 No server or API key is required. Dataset and policy changes reset on refresh unless exported. The optional CLI requires Node.js 20+; see the project README.
 
@@ -40,7 +40,7 @@ No server or API key is required. Dataset and policy changes reset on refresh un
 
 ## API Launch Readiness
 
-Open `projects/api-launch-readiness/demo/index.html`.
+**[Open API Launch Readiness in your browser](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/).** For offline use, open `projects/api-launch-readiness/demo/index.html`.
 
 **Try this:** Compare the blocked, pilot, and ready scenarios. Remove an evidence note to inspect how a missing requirement affects the decision. Export a CSV decision record.
 
