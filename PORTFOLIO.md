@@ -4,6 +4,12 @@ Nine independent projects exploring AI evaluation, delivery management, platform
 
 [Profile](README.md) · [Run the demos](START_HERE.md) · [Roadmap](ROADMAP.md)
 
+## Start with a live demo
+
+[Try AgentTrace](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/) to compare agent runs, or [try API Launch Readiness](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/) to inspect release blockers. Both open directly in a browser with synthetic examples and no API key.
+
+For delivery monitoring, [preview Project Sentinel](projects/project-sentinel/assets/dashboard.jpg) and follow its [local setup guide](projects/project-sentinel/LAPTOP_SETUP.md).
+
 ## Choose a project by the decision
 
 | Project | Product question | Review first |
@@ -35,7 +41,7 @@ Detailed records: [Sentinel](projects/project-sentinel/VALIDATION.md) · [AgentT
 
 Project Sentinel, AgentTrace, and API Launch Readiness live in this repository's `projects/` directory. The other six projects live in the separate repositories linked above. Each runs independently.
 
-Project Sentinel uses a local Python server and SQLite. AgentTrace and API Launch Readiness open as local browser files. The original six browser demos live under `demo/index.html` in their respective repositories.
+Project Sentinel uses a local Python server and SQLite. AgentTrace and API Launch Readiness are available as live GitHub Pages demos and as local browser files. The original six browser demos live under `demo/index.html` in their respective repositories.
 
 ## Evidence and authorship
 
