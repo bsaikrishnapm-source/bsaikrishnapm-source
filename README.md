@@ -7,6 +7,14 @@ Explore my work in delivery monitoring, AI evaluation, and platform readiness. E
 
 [LinkedIn](https://www.linkedin.com/in/saibanda) · [Email](mailto:bsaikrishna.pm@gmail.com) · [All nine projects](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/PORTFOLIO.md) · [Five-minute review](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/REVIEWER_GUIDE.md)
 
+## Try a working demo
+
+**[Open AgentTrace](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/)** · **[Open API Launch Readiness](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/)**
+
+Both demos run in your browser with synthetic examples. No installation, login, or API key is required. Start with a sample, change one assumption, and inspect how the recommendation changes.
+
+Project Sentinel uses a local Python server: [view the dashboard](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/assets/dashboard.jpg) or follow its setup guide below.
+
 ## Selected work
 
 ### 01 / Project Sentinel
@@ -27,7 +35,7 @@ Compare recorded baseline and candidate runs across success, cost, latency, and 
 
 **Product judgment:** Evaluate segment regressions and unauthorized actions alongside aggregate performance. Require sufficient evidence and keep the release decision with a person.
 
-[Explore AgentTrace](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/agenttrace) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/PRODUCT.md) · [Data contract](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/DATA_CONTRACT.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/VALIDATION.md)
+[Try the live demo](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/) · [Explore AgentTrace](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/agenttrace) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/PRODUCT.md) · [Data contract](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/DATA_CONTRACT.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/agenttrace/VALIDATION.md)
 
 ### 03 / API Launch Readiness
 **Make release blockers and missing evidence visible.**
@@ -36,7 +44,7 @@ An interactive console for reviewing release gates, dependencies, accountable te
 
 **Product judgment:** A reported pass needs evidence. Critical blockers and unresolved dependencies must remain visible in the release recommendation.
 
-[Explore the console](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/api-launch-readiness) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/api-launch-readiness/PRODUCT.md) · [Decision log](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/api-launch-readiness/DECISIONS.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/api-launch-readiness/VALIDATION.md)
+[Try the live demo](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/) · [Explore the console](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/api-launch-readiness) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/api-launch-readiness/PRODUCT.md) · [Decision log](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/api-launch-readiness/DECISIONS.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/api-launch-readiness/VALIDATION.md)
 
 ## Explore by product question
 
@@ -55,7 +63,7 @@ An interactive console for reviewing release gates, dependencies, accountable te
 
 The portfolio demonstrates requirements, prioritization, success metrics, release criteria, and experiment design. Product briefs explain the choices; runnable implementations make the assumptions easier to challenge.
 
-**Try a project:** Follow the [local demo guide](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/START_HERE.md). Core demos need no API key. These GitHub links open source and documentation; the applications run on your computer.
+**Explore further:** The [demo guide](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/START_HERE.md) includes live demos, offline alternatives, and Project Sentinel setup.
 
 <details>
 <summary><strong>Implementation evidence and verification</strong></summary>
