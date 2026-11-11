@@ -38,6 +38,8 @@ Primary user: a PM or product owner coordinating a cross-functional delivery pro
 8. The background monitor works without an open browser.
 9. An optional AI briefing cannot bypass the detectors or mutate project state.
 10. Every recommendation has an accountable owner and supporting alert evidence.
+11. A reviewer can try the full workflow in a browser without installing anything, with results identical to the local app.
+12. The plan-versus-actual gap is visible over time, not only as a single snapshot.
 
 ## Metrics to validate with actual users
 
@@ -49,5 +51,6 @@ Later outcomes to measure: actionable-alert precision judged by users, alert-to-
 
 - Confirm the laptop OS and resources; install the app and run a real-browser walkthrough.
 - Validate detection thresholds against a real project and identify alert fatigue.
+- Design an approved rebaseline workflow: a change request with reason and approver that creates baseline v2 while keeping v1 visible on the drift chart.
 - Add one authenticated project-system connector before broad integration coverage.
 - Design authorization, data retention, backups and approved notification destinations before shared deployment.

@@ -22,15 +22,26 @@ The process is a deterministic monitoring pipeline with an optional model adapte
 | --- | --- |
 | `engine.py` | Schema validation, baseline protection, metrics, detectors, evidence-rule brief |
 | `store.py` | SQLite projects, persistent alert lifecycle and assessment history |
-| `app.py` | Loopback HTTP API, static UI, background monitor, optional watched-file ingestion |
+| `api.py` | Transport-independent API routes and error mapping |
+| `app.py` | Loopback HTTP server, static UI, background monitor, optional watched-file ingestion |
 | `assistant.py` | Optional local Ollama briefing, schema/citation validation and fallback |
 | `monitor.py` | Reproducible one-shot CLI analysis |
 | `samples.py` | Fictional projects dated relative to startup day |
-| `static/` | Dashboard and forms, no frontend framework or build step |
+| `static/` | Dashboard, forms and drift chart; no frontend framework or build step |
+| `static/sentinel-browser.js` | Browser port of engine, samples, store and API for the no-install demo |
+| `tests/parity.cjs` | Runs both implementations on generated projects and an API lifecycle; requires identical results |
+
+## Two runtimes, one behavior
+
+`static/app.js` checks where the page is served from. On `127.0.0.1` or `localhost` it calls the Python server. Anywhere else, including GitHub Pages and `file://`, it loads `sentinel-browser.js` and answers the same API routes in the page, saving the workspace to that browser's local storage.
+
+The Python modules remain the reference implementation. The browser port reproduces Python's number formatting (round-half-even), JSON escaping and SHA-256 fingerprints so evidence text and alert IDs match exactly. Totals use left-to-right summation in both runtimes because Python 3.12 changed `sum()` for floats. The parity test fails if any report, validation outcome or lifecycle state differs.
 
 ## Calculations
 
 For each baseline task, expected fraction is zero before its planned start, one on/after its due date, and linear between. Zero-duration tasks become expected on their due date. Expected project progress is weighted by original baseline points.
+
+The report's `plan` field lists the planned-progress value at every date where the curve changes slope (project start and target, and each baseline task's start and due date). Between those dates the curve is linear, so the chart draws the exact plan, not a sample.
 
 Actual baseline progress uses original points times reported progress. Current-scope completion uses current points, including added work. These denominators are deliberately separate.
 
@@ -55,7 +66,7 @@ The finish scenario extrapolates elapsed days divided by current-scope completio
 
 ## Persistence and operations
 
-SQLite stores projects, alert lifecycle and the last 100 changed assessments per project. Stable alert IDs deduplicate scans. Unchanged evidence retains acknowledgement; changed evidence or recurrence reopens it. Resolved alerts remain inspectable. Writes and scans use a process lock and database transactions. The workspace is designed for one local user/process, not concurrent distributed writers.
+SQLite stores projects, alert lifecycle (including when an alert was acknowledged) and the last 100 changed assessments per project. The drift chart plots the latest assessment for each review date. A new workspace seeds the two sample projects with synthetic weekly checkpoints. Stable alert IDs deduplicate scans. Unchanged evidence retains acknowledgement; changed evidence or recurrence reopens it. Resolved alerts remain inspectable. Writes and scans use a process lock and database transactions. The workspace is designed for one local user/process, not concurrent distributed writers.
 
 The watcher imports valid changes atomically. On invalid source data, the last valid assessment stays visible with an error. Dashboard edits do not write back to the watched source.
 

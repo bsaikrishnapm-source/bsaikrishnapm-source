@@ -4,6 +4,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 from pathlib import Path
 import argparse
+import hashlib
 import json
 import mimetypes
 import os
@@ -11,13 +12,14 @@ import threading
 import time
 from engine import ValidationError
 from store import Store
-from assistant import local_brief
+from api import Api
 
 ROOT=Path(__file__).resolve().parent
+STATIC_ROUTES={'/':'index.html','/app.js':'app.js','/style.css':'style.css'}
 
 
 def make_server(store,port=8765,model=None,interval=60,watch=None):
-    meta={'interval_seconds':interval,'model_configured':bool(model),'monitor_error':None,'watching_file':bool(watch)}
+    meta={'mode':'local','interval_seconds':interval,'model_configured':bool(model),'monitor_error':None,'watching_file':bool(watch)}
     stop=threading.Event()
     watch_hash=None
     def monitor_once():
@@ -25,7 +27,6 @@ def make_server(store,port=8765,model=None,interval=60,watch=None):
         try:
             if watch:
                 raw=Path(watch).read_bytes()
-                import hashlib
                 digest=hashlib.sha256(raw).hexdigest()
                 if digest!=watch_hash:
                     store.import_project(json.loads(raw))
@@ -37,6 +38,7 @@ def make_server(store,port=8765,model=None,interval=60,watch=None):
     def loop():
         while not stop.wait(interval):
             monitor_once()
+    api=Api(store,meta,model,monitor_once)
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):
             pass
@@ -60,13 +62,10 @@ def make_server(store,port=8765,model=None,interval=60,watch=None):
         def do_GET(self):
             if not self.permitted(): return self.send(403,{'error':'Use the local application address'})
             path=urlparse(self.path)
-            if path.path=='/api/state':
-                return self.send(200,dict(**store.state(),monitor=meta))
-            if path.path=='/api/history':
-                return self.send(200,store.history(parse_qs(path.query).get('project',[''])[0]))
-            routes={'/':'index.html','/app.js':'app.js','/style.css':'style.css'}
-            if path.path in routes:
-                file=ROOT/'static'/routes[path.path]
+            result=api.get(path.path,parse_qs(path.query))
+            if result: return self.send(*result)
+            if path.path in STATIC_ROUTES:
+                file=ROOT/'static'/STATIC_ROUTES[path.path]
                 return self.send(200,file.read_bytes(),mimetypes.guess_type(file.name)[0] or 'text/plain')
             return self.send(404,{'error':'Not found'})
         def do_POST(self):
@@ -78,24 +77,9 @@ def make_server(store,port=8765,model=None,interval=60,watch=None):
                 if not 0<size<=1000000:
                     raise ValidationError('Request size must be 1–1,000,000 bytes')
                 data=json.loads(self.rfile.read(size))
-                if not isinstance(data,dict): raise ValidationError('Expected JSON object')
-                if self.path=='/api/import': store.import_project(data['project'])
-                elif self.path=='/api/task': store.update_task(data['project_id'],data['task_id'],data['changes'])
-                elif self.path=='/api/status': store.update_status(data['project_id'],data['changes'])
-                elif self.path=='/api/add-task': store.add_task(data['project_id'],data['task'])
-                elif self.path=='/api/acknowledge': store.acknowledge(data['alert_id'])
-                elif self.path=='/api/date': store.set_date(data.get('as_of'))
-                elif self.path=='/api/scan': monitor_once()
-                elif self.path=='/api/brief':
-                    item=next((p for p in store.state()['projects'] if p['project']['id']==data['project_id']),None)
-                    if not item: raise ValidationError('Unknown project')
-                    return self.send(200,local_brief(item['report'],model))
-                else: return self.send(404,{'error':'Not found'})
-                self.send(200,dict(**store.state(),monitor=meta))
-            except (ValidationError,ValueError,KeyError,TypeError) as e:
-                self.send(400,{'error':str(e)})
-            except Exception:
-                self.send(500,{'error':'Operation failed. Existing state was preserved.'})
+            except (ValidationError,ValueError) as e:
+                return self.send(400,{'error':str(e)})
+            self.send(*api.post(urlparse(self.path).path,data))
     server=ThreadingHTTPServer(('127.0.0.1',port),Handler)
     server.daemon_threads=True
     server.stop_monitor=stop.set

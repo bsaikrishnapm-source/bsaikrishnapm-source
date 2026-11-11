@@ -31,6 +31,15 @@ def text(value, name, empty=False):
         raise ValidationError(f"Invalid {name}")
 
 
+def total(values):
+    """Left-to-right sum. Python 3.12+ sum() compensates float error, which would make results
+    depend on the Python version (and differ from the browser engine) in the last digit."""
+    result = 0
+    for value in values:
+        result += value
+    return result
+
+
 def identifier(value):
     if not isinstance(value, str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,100}', value):
         raise ValidationError('IDs must use 1–100 letters, digits, underscores or hyphens')
@@ -42,6 +51,10 @@ def validate(p):
             text(p[key], key)
         identifier(p['id'])
         b = p['baseline']
+        if not isinstance(b, dict) or not isinstance(p['quality'], dict):
+            raise ValidationError('baseline and quality must be objects')
+        if not isinstance(p['team'], list) or not isinstance(p['decisions'], list):
+            raise ValidationError('team and decisions must be lists')
         if day(b['target_date']) <= day(b['start_date']):
             raise ValidationError('Target must follow start date')
         number(b['budget'], 'budget', 1)
@@ -80,7 +93,7 @@ def validate(p):
                 day(t['blocked_since'])
             if not isinstance(t['depends_on'], list) or len(t['depends_on']) != len(set(t['depends_on'])):
                 raise ValidationError('Invalid dependency list')
-        if abs(sum(t['baseline_points'] for t in tasks) - b['scope_points']) > .001:
+        if abs(total(t['baseline_points'] for t in tasks) - b['scope_points']) > .001:
             raise ValidationError('Baseline task points must sum to baseline scope_points')
         graph = {t['id']: t['depends_on'] for t in tasks}
         seen, active = set(), set()
@@ -144,21 +157,38 @@ def preserve_baseline(old, new):
         raise ValidationError('New scope must have baseline_points = 0')
 
 
+def expected_at(tasks, scope_points, when):
+    """Planned baseline progress (%) on a date: each task accrues linearly from planned start to due."""
+    expected = 0.0
+    for t in tasks:
+        s, d = day(t['baseline_start']), day(t['baseline_due'])
+        share = (1 if when >= d else 0) if d == s else min(1, max(0, (when-s).days/(d-s).days))
+        expected += t['baseline_points'] * share
+    return expected / scope_points * 100
+
+
+def plan_curve(tasks, baseline):
+    """Exact planned-progress curve. Expected progress is piecewise linear between these dates."""
+    dates = {day(baseline['start_date']), day(baseline['target_date'])}
+    for t in tasks:
+        if t['baseline_points'] > 0:
+            s, d = day(t['baseline_start']), day(t['baseline_due'])
+            dates.update((s, d))
+            if s == d:
+                dates.add(d - timedelta(days=1))
+    return [dict(date=x.isoformat(), expected=round(expected_at(tasks, baseline['scope_points'], x), 1)) for x in sorted(dates)]
+
+
 def analyze(project, as_of):
     p = validate(project)
     today = day(as_of)
     tasks, b = p['tasks'], p['baseline']
     start, target = day(b['start_date']), day(b['target_date'])
     by_id = {t['id']: t for t in tasks}
-    expected = 0.0
-    for t in tasks:
-        s, d = day(t['baseline_start']), day(t['baseline_due'])
-        share = (1 if today >= d else 0) if d == s else min(1, max(0, (today-s).days/(d-s).days))
-        expected += t['baseline_points'] * share
-    expected = expected / b['scope_points'] * 100
-    actual = sum(t['baseline_points']*t['progress']/100 for t in tasks)/b['scope_points']*100
-    points = sum(t['points'] for t in tasks)
-    completion = sum(t['points']*t['progress']/100 for t in tasks)/points*100
+    expected = expected_at(tasks, b['scope_points'], today)
+    actual = total(t['baseline_points']*t['progress']/100 for t in tasks)/b['scope_points']*100
+    points = total(t['points'] for t in tasks)
+    completion = total(t['points']*t['progress']/100 for t in tasks)/points*100
     scope_growth = (points/b['scope_points']-1)*100
     spend_pct = p['spent']/b['budget']*100
     gap = expected-actual
@@ -205,16 +235,18 @@ def analyze(project, as_of):
         deps=[by_id[i] for i in t['depends_on'] if by_id[i]['status']!='done']
         at_risk=[d for d in deps if d['status']=='blocked' or day(d['due_date'])>=day(t['due_date']) or t['progress']>0]
         if t['status']=='blocked' or at_risk:
-            titles=', '.join(d['title'] for d in at_risk)
-            alert('dependency',t['id'],'warning','Blocked path: '+t['title'],
-                  'Task reported blocked.'+(' Unfinished prerequisites: '+titles+'.' if titles else ''),
+            blocked=t['status']=='blocked'
+            reasons='; '.join(d['title']+(' (blocked)' if d['status']=='blocked' else f" (due {d['due_date']}, not before this task)"
+                                          if day(d['due_date'])>=day(t['due_date']) else ' (unfinished; this task has already started)') for d in at_risk)
+            evidence=' '.join(x for x in ('Task reported blocked.' if blocked else '','Unfinished prerequisites: '+reasons+'.' if reasons else '') if x)
+            alert('dependency',t['id'],'warning',('Blocked path: ' if blocked else 'Dependency risk: ')+t['title'],evidence,
                   'Bring prerequisite owners together; unblock or resequence work and confirm the effect on the milestone.',t['owner'] or p['owner'],[t['id']]+[d['id'] for d in at_risk])
         if not t['owner']:
             alert('ownership',t['id'],'warning','Unowned work: '+t['title'],'No accountable owner is recorded.',
                   'Assign one accountable owner before work proceeds.',p['owner'],[t['id']])
     for owner in p['team']:
         due=[t for t in unfinished if t['owner']==owner['name'] and day(t['due_date'])<=today+timedelta(days=7)]
-        load=sum(t['points']*(1-t['progress']/100) for t in due)
+        load=total(t['points']*(1-t['progress']/100) for t in due)
         if load > owner['weekly_capacity']:
             alert('capacity',owner['name'],'warning',owner['name']+' has too much near-term work',
                   f"{load:.1f} remaining points due within seven days (including overdue), capacity {owner['weekly_capacity']:g}.",
@@ -251,7 +283,7 @@ def analyze(project, as_of):
                  data_confidence='Needs fresh data' if stale or future else 'Current task updates',
                  done=sum(t['status']=='done' for t in tasks),total=len(tasks))
     return dict(project_id=p['id'],as_of=as_of,health='Needs attention' if any(a['severity']=='critical' for a in alerts) else 'Watch' if alerts else 'On track',
-                metrics=metrics,alerts=alerts,trace=trace)
+                metrics=metrics,alerts=alerts,trace=trace,plan=plan_curve(tasks,b))
 
 
 def brief(report):

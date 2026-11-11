@@ -1,4 +1,5 @@
 """Fictional projects generated relative to the review day."""
+from copy import deepcopy
 from datetime import date, timedelta
 
 
@@ -30,3 +31,33 @@ def demo_projects(today=None):
                         task('P2','Build activation model','Casey',20,-10,10,50,'in_progress'),
                         task('P3','Publish dashboard and guide','Jamie',10,10,20,0,'todo',deps=['P2'])])
     return [risk,healthy]
+
+
+# Synthetic earlier status checkpoints so a fresh workspace can show drift over time.
+# offset (days before today), spend, quality and per-task reported progress at that date.
+CHECKPOINTS={
+    'atlas':[(-21,18000,(0,1,40,0),{'A1':100,'A2':5}),
+             (-14,32000,(0,3,80,4),{'A1':100,'A2':30,'A3':5}),
+             (-7,47000,(1,5,100,12),{'A1':100,'A2':55,'A3':20,'A4':10})],
+    'pulse':[(-14,7000,(0,0,20,0),{'P1':60}),
+             (-7,12000,(0,1,40,1),{'P1':100,'P2':15})]}
+
+
+def demo_history(project, today=None):
+    """Return (as_of, project_snapshot) pairs reconstructed from the synthetic checkpoints."""
+    today=today or date.today()
+    result=[]
+    for offset,spent,quality,progress in CHECKPOINTS.get(project['id'],[]):
+        as_of=(today+timedelta(days=offset)).isoformat()
+        snap=deepcopy(project)
+        snap['spent']=spent
+        snap['quality']=dict(zip(('open_critical','open_high','total_tests','failed_tests'),quality))
+        snap['tasks']=[t for t in snap['tasks'] if t['baseline_points']>0 or t['baseline_start']<=as_of]
+        for t in snap['tasks']:
+            pct=progress.get(t['id'],0)
+            t.update(progress=pct,status='done' if pct==100 else 'todo' if pct==0 else 'in_progress',
+                     due_date=t['baseline_due'],blocked_since=None,
+                     completed_at=t['completed_at'] if pct==100 else None,
+                     updated_at=t['completed_at'] if pct==100 else as_of)
+        result.append((as_of,snap))
+    return result
