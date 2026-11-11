@@ -10,9 +10,9 @@ These independent projects connect product judgment with inspectable implementat
 
 **Product choice:** Keep the original baseline visible. An acknowledgement records review; the alert resolves only when its underlying condition clears. Changed evidence can reopen it.
 
-**Inspect:** [Product brief](projects/project-sentinel/PRODUCT.md), [actual dashboard](projects/project-sentinel/assets/dashboard.jpg), and [validation record](projects/project-sentinel/VALIDATION.md).
+**Inspect:** [Live demo](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/project-sentinel/static/), [product brief](projects/project-sentinel/PRODUCT.md), [actual dashboard](projects/project-sentinel/assets/dashboard.jpg), and [validation record](projects/project-sentinel/VALIDATION.md).
 
-**Try:** Acknowledge a risk, update the associated work, and inspect the alert history. Restart the local server to check persistence.
+**Try:** Read the drift chart, acknowledge a risk, update the associated work, and inspect the alert history. Reload the page (or restart the local server) to check persistence.
 
 **Discuss:** How should a PM approve a legitimate baseline change? What alert volume would make the tool distracting? Which integration should follow a usability study?
 

@@ -6,11 +6,11 @@
 
 | Start here if you want to… | Project | Requirements |
 | --- | --- | --- |
-| Inspect project risk and update ongoing work | [Project Sentinel](#project-sentinel) | Python 3.10+ and a browser |
+| Inspect project risk and update ongoing work | [Open Project Sentinel](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/project-sentinel/static/) | A browser; no installation (Python 3.10+ for the full local app) |
 | Compare AI agent run records | [Open AgentTrace](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/) | A browser; no installation |
 | Review release gates and dependencies | [Open API Launch Readiness](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/) | A browser; no installation |
 
-AgentTrace and API Launch Readiness have live browser demos. Project Sentinel runs on your computer using a local Python server. All bundled scenarios are synthetic.
+All three projects have live browser demos. Project Sentinel can also run on your computer with a local Python server for scheduled monitoring, SQLite storage and optional local AI. All bundled scenarios are synthetic.
 
 ## Download for local or offline use
 
@@ -18,11 +18,15 @@ For Project Sentinel or offline copies of the browser demos, open [this reposito
 
 ## Project Sentinel
 
+**[Open Project Sentinel in your browser](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/project-sentinel/static/).** Your edits stay in that browser; select **Reset demo data** to start over. For offline use, open `projects/project-sentinel/static/index.html` from the extracted folder.
+
+To run the full local application:
+
 1. Open a terminal in the extracted `projects/project-sentinel` folder.
 2. Run `python3 app.py` on macOS/Linux or `py -3 app.py` on Windows.
 3. Open **http://127.0.0.1:8765** in a browser on the same computer.
 
-**Try this:** Inspect the Atlas sample, open an alert's evidence, acknowledge it, update the underlying work, and review the resulting alert state. Compare it with the healthy Pulse sample. Export a status brief.
+**Try this:** Inspect the Atlas sample and its drift chart, open an alert's evidence, acknowledge it, update the underlying work, and review the resulting alert state. Compare it with the healthy Pulse sample. Export a status brief.
 
 Projects and alert history persist in local SQLite storage. Monitoring runs while the Python process and computer remain active. Stop the server with **Ctrl+C**.
 

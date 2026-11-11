@@ -72,6 +72,8 @@ Next: conduct usability sessions with platform PMs, assess gate completeness wit
 
 Published the [PM project-monitoring application](projects/project-sentinel), based on Sai's idea to detect delivery problems after kickoff. Delivered baseline protection, drift detection, project/task/evidence forms, persistent acknowledgement and resolution, scheduled checks, JSON ingestion/export and optional local AI briefs. Validation: **39 Python tests and 10 browser workflow checks passed**, including a mobile overflow fix.
 
+**v0.2.0:** added a [no-install live demo](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/project-sentinel/static/) backed by a parity-tested browser port of the engine, a plan-versus-actual drift chart, project deletion, timestamped acknowledgements, and fixes to dependency evidence and review-date stamping. Validation: **50 Python tests, the parity check and 15 browser workflow checks passed**.
+
 Next deployment step: confirm the target laptop's OS and resources, run the local application there, and select an authenticated private access method. Remote connection and hosting have not been configured. Direct project-system connectors, outbound notifications, approved rebaseline workflow and real-user validation remain open.
 
 ## AgentTrace — agent evaluation workbench

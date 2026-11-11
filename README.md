@@ -9,24 +9,22 @@ Explore my work in delivery monitoring, AI evaluation, and platform readiness. E
 
 ## Try a working demo
 
-**[Open AgentTrace](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/)** · **[Open API Launch Readiness](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/)**
+**[Open Project Sentinel](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/project-sentinel/static/)** · **[Open AgentTrace](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/)** · **[Open API Launch Readiness](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/)**
 
-Both demos run in your browser with synthetic examples. No installation, login, or API key is required. Start with a sample, change one assumption, and inspect how the recommendation changes.
-
-Project Sentinel uses a local Python server: [view the dashboard](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/assets/dashboard.jpg) or follow its setup guide below.
+All three demos run in your browser with synthetic examples. No installation, login, or API key is required. Start with a sample, change one assumption, and inspect how the recommendation changes.
 
 ## Selected work
 
 ### 01 / Project Sentinel
 **Help product managers spot delivery risk after kickoff.**
 
-A local dashboard that compares ongoing work with the original project baseline. It brings progress, scope, dependencies, spending, and overdue decisions into one review.
+A dashboard that compares ongoing work with the original project baseline and charts the drift over time. It brings progress, scope, dependencies, spending, and overdue decisions into one review. Try it in the browser, or run the full app locally with Python.
 
 **Product judgment:** Keep the original commitment visible. Connect each alert to evidence, an accountable owner, and a next step. Track acknowledgement separately from resolution.
 
 [![Project Sentinel dashboard with synthetic project data](https://raw.githubusercontent.com/bsaikrishnapm-source/bsaikrishnapm-source/main/projects/project-sentinel/assets/dashboard.jpg)](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/project-sentinel)
 
-[Explore Sentinel](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/project-sentinel) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/PRODUCT.md) · [Run locally](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/LAPTOP_SETUP.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/VALIDATION.md)
+[Try the live demo](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/project-sentinel/static/) · [Explore Sentinel](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/tree/main/projects/project-sentinel) · [Product brief](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/PRODUCT.md) · [Run locally](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/LAPTOP_SETUP.md) · [Validation](https://github.com/bsaikrishnapm-source/bsaikrishnapm-source/blob/main/projects/project-sentinel/VALIDATION.md)
 
 ### 02 / AgentTrace
 **Make AI agent release reviews more reproducible.**
@@ -70,7 +68,7 @@ The portfolio demonstrates requirements, prioritization, success metrics, releas
 
 | Project | Recorded checks | Remaining checks |
 | --- | --- | --- |
-| Project Sentinel | 39 Python tests; 10 browser workflow checks | Full accessibility, cross-browser, and live-model evaluation |
+| Project Sentinel | 50 Python tests; Python/browser parity check; 15 browser workflow checks | Full accessibility, cross-browser, and live-model evaluation |
 | AgentTrace | 18 engine tests; three CLI scenarios; DOM interaction checks, including policy import/export | Real-browser layout and downloads |
 | API Launch Readiness | 12 engine tests | Browser workflows and accessibility |
 

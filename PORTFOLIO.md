@@ -8,13 +8,13 @@ Nine independent projects exploring AI evaluation, delivery management, platform
 
 [Try AgentTrace](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/agenttrace/) to compare agent runs, or [try API Launch Readiness](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/api-launch-readiness/demo/) to inspect release blockers. Both open directly in a browser with synthetic examples and no API key.
 
-For delivery monitoring, [preview Project Sentinel](projects/project-sentinel/assets/dashboard.jpg) and follow its [local setup guide](projects/project-sentinel/LAPTOP_SETUP.md).
+For delivery monitoring, [open the Project Sentinel live demo](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/project-sentinel/static/) or follow its [local setup guide](projects/project-sentinel/LAPTOP_SETUP.md).
 
 ## Choose a project by the decision
 
 | Project | Product question | Review first |
 | --- | --- | --- |
-| **[Project Sentinel](projects/project-sentinel)** | Where is delivery drifting from the kickoff baseline, and who should act? | [Product brief](projects/project-sentinel/PRODUCT.md) · [Dashboard](projects/project-sentinel/assets/dashboard.jpg) |
+| **[Project Sentinel](projects/project-sentinel)** | Where is delivery drifting from the kickoff baseline, and who should act? | [Live demo](https://bsaikrishnapm-source.github.io/bsaikrishnapm-source/projects/project-sentinel/static/) · [Product brief](projects/project-sentinel/PRODUCT.md) · [Dashboard](projects/project-sentinel/assets/dashboard.jpg) |
 | **[AgentTrace](projects/agenttrace)** | Should an agent change advance to human release review? | [Product brief](projects/agenttrace/PRODUCT.md) · [Data contract](projects/agenttrace/DATA_CONTRACT.md) |
 | [API Launch Readiness](projects/api-launch-readiness) | Is there enough evidence to advance a platform release? | [Product brief](projects/api-launch-readiness/PRODUCT.md) · [Decision log](projects/api-launch-readiness/DECISIONS.md) |
 | [AI Cost Quality Lab](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab) | Which approach meets quality and latency needs at an acceptable cost? | [Decision memo](https://github.com/bsaikrishnapm-source/ai-cost-quality-lab/blob/main/PRODUCT.md) |
@@ -30,7 +30,7 @@ These are recorded checks from the implementation work, not fresh test runs or b
 
 | Project group | Recorded verification | Remaining verification |
 | --- | --- | --- |
-| Project Sentinel | 39 Python tests; 10 real-browser workflow checks; desktop and mobile screenshot inspection | Full accessibility audit, cross-browser coverage, laptop deployment, and real-model inference |
+| Project Sentinel | 50 Python tests; Python/browser parity check; 15 real-browser workflow checks; desktop and mobile screenshot inspection | Full accessibility audit, cross-browser coverage, laptop deployment, and real-model inference |
 | AgentTrace | 18 Node engine tests; three CLI scenarios; DOM integration checks | Real-browser layout, downloads, and accessibility |
 | API Launch Readiness | 12 automated engine tests | Browser rendering, exports, and accessibility |
 | Original six standalone repositories | 45 Node decision tests; six Python baseline entry points | Browser rendering and accessibility |
@@ -41,7 +41,7 @@ Detailed records: [Sentinel](projects/project-sentinel/VALIDATION.md) · [AgentT
 
 Project Sentinel, AgentTrace, and API Launch Readiness live in this repository's `projects/` directory. The other six projects live in the separate repositories linked above. Each runs independently.
 
-Project Sentinel uses a local Python server and SQLite. AgentTrace and API Launch Readiness are available as live GitHub Pages demos and as local browser files. The original six browser demos live under `demo/index.html` in their respective repositories.
+Project Sentinel, AgentTrace and API Launch Readiness are available as live GitHub Pages demos and as local browser files. Sentinel's full application also runs as a local Python server with SQLite. The original six browser demos live under `demo/index.html` in their respective repositories.
 
 ## Evidence and authorship
 
