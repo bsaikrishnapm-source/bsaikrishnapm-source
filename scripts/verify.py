@@ -23,6 +23,8 @@ def main():
     checks = [
         ("Sentinel Python and HTTP tests", "projects/project-sentinel",
          [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"], 0, None),
+        ("Sentinel browser demo parity with Python", "projects/project-sentinel",
+         [node, "tests/parity.cjs"], 0, "PASS"),
         ("AgentTrace engine tests", "projects/agenttrace",
          [node, "--test", "tests/engine.test.js"], 0, None),
         ("API launch engine tests", "projects/api-launch-readiness",
