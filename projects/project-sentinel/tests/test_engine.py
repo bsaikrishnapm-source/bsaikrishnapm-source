@@ -1,8 +1,8 @@
 import unittest
 from copy import deepcopy
 from datetime import date
-from engine import analyze,validate,preserve_baseline,ValidationError
-from samples import demo_projects
+from engine import analyze,validate,preserve_baseline,ValidationError,expected_at,day
+from samples import demo_projects,demo_history
 from assistant import local_brief
 import json
 
@@ -66,6 +66,31 @@ class EngineTests(unittest.TestCase):
         p=deepcopy(self.healthy);t=deepcopy(p['tasks'][2]);t.update(id='P4',baseline_points=0);p['tasks'].append(t)
         validate(p);preserve_baseline(self.healthy,p)
         self.assertEqual(self.report(p)['metrics']['scope_growth'],25)
+    def test_plan_curve_is_exact_and_bounded(self):
+        r=self.report();plan=r['plan'];self.assertEqual(plan[0]['expected'],0);self.assertEqual(plan[-1]['expected'],100)
+        self.assertEqual(plan[0]['date'],self.risk['baseline']['start_date']);self.assertEqual(plan[-1]['date'],self.risk['baseline']['target_date'])
+        for a,b in zip(plan,plan[1:]):
+            self.assertLessEqual(a['expected'],b['expected'])
+            mid=day(a['date'])+(day(b['date'])-day(a['date']))//2
+            exact=expected_at(self.risk['tasks'],100,mid);ta,tb=day(a['date']),day(b['date'])
+            linear=a['expected']+(b['expected']-a['expected'])*((mid-ta).days/(tb-ta).days)
+            self.assertAlmostEqual(exact,linear,delta=.11)
+    def test_dependency_evidence_does_not_claim_unblocked_task_is_blocked(self):
+        alerts={a['task_ids'][0]:a for a in self.report()['alerts'] if a['code']=='dependency'}
+        self.assertTrue(alerts['A2']['evidence'].startswith('Task reported blocked'))
+        self.assertNotIn('reported blocked',alerts['A3']['evidence'])
+        self.assertIn('Authentication contract (blocked)',alerts['A3']['evidence'])
+        self.assertTrue(alerts['A3']['title'].startswith('Dependency risk'))
+    def test_sample_checkpoints_are_valid_and_show_drift(self):
+        points=[(a,analyze(p,a)['metrics']) for a,p in demo_history(self.risk,date(2026,9,29))]
+        self.assertEqual([a for a,_ in points],['2026-09-08','2026-09-15','2026-09-22'])
+        gaps=[m['gap'] for _,m in points]+[self.report()['metrics']['gap']]
+        self.assertEqual(gaps,sorted(gaps));self.assertGreater(gaps[-1],gaps[0])
+        for _,p in demo_history(self.healthy,date(2026,9,29)):self.assertEqual(analyze(p,_)['health'],'On track')
+    def test_team_and_decisions_must_be_lists(self):
+        for key in ('team','decisions'):
+            p=deepcopy(self.risk);p[key]={}
+            with self.assertRaises(ValidationError):validate(p)
     def test_unknown_model_citation_falls_back(self):
         response={'message':{'content':json.dumps({'summary':'Draft','actions':[{'alert_id':'unknown','action':'Invented'}]})}}
         b=local_brief(self.report(),'fake',lambda _:response);self.assertEqual(b['source'],'Evidence rules');self.assertIn('notice',b)

@@ -27,13 +27,26 @@ async function main() {
   await page.locator('#projectName').filter({ hasText: 'Atlas Partner API' }).waitFor();
   assert.equal(await page.locator('#health').innerText(), 'Needs attention');
   assert.equal(await page.locator('#alerts article').count(), 13);
+  await page.locator('#driftChart svg .plan-line').waitFor();
+  assert.equal(await page.locator('#driftChart .actual-dot').count(), 4);
+  assert.ok((await page.locator('#driftChart').innerHTML()).includes('pts behind plan'));
   fs.mkdirSync(path.join(root, 'assets'), { recursive: true });
+  await page.waitForTimeout(500); // let progress-bar transitions finish
   await page.screenshot({ path: path.join(root, 'assets/dashboard.jpg'), type: 'jpeg', quality: 82 });
   console.log('PASS desktop load and risk assessment');
+  const chart = await page.locator('#driftChart svg').boundingBox();
+  await page.mouse.move(chart.x + chart.width * 0.55, chart.y + chart.height / 2);
+  await page.locator('#driftTip').filter({ hasText: 'Plan' }).waitFor();
+  await page.mouse.move(0, 0);
+  await page.locator('#driftChart').focus(); await page.keyboard.press('ArrowLeft');
+  assert.ok((await page.locator('#driftTip').innerText()).includes('Plan'));
+  assert.equal(await page.locator('#driftTable tr').count(), 5);
+  console.log('PASS drift chart, hover and keyboard readout');
   await page.getByRole('button', { name: 'Acknowledge', exact: true }).first().click();
   await page.locator('#toast').filter({ hasText: 'Acknowledged.' }).waitFor();
   await page.selectOption('#alertFilter', 'acknowledged');
   assert.equal(await page.locator('#alerts article').count(), 1);
+  assert.ok((await page.locator('#alerts .alert-footer').innerText()).includes('Acknowledged'));
   await page.selectOption('#alertFilter', 'active');
   console.log('PASS acknowledge and filter');
   await page.getByRole('button', { name: 'Edit Authentication contract', exact: true }).click();
@@ -78,7 +91,14 @@ async function main() {
   await page.locator('#importError').filter({ hasText: 'Baseline is locked' }).waitFor();
   await page.keyboard.press('Escape');
   console.log('PASS invalid baseline import rejected in UI');
+  await page.click('#deleteBtn');
+  await page.getByRole('button', { name: 'Delete project', exact: true }).last().click();
+  await page.locator('#deleteDialog').waitFor({ state: 'hidden' });
+  assert.equal(await page.locator('#projects button').count(), 2);
+  assert.notEqual(await page.locator('#projectName').innerText(), 'Northstar Demo');
+  console.log('PASS delete project with confirmation');
   await page.setViewportSize({ width: 390, height: 844 });
+  await page.waitForTimeout(600); // let the chart redraw at the new width and bar transitions settle
   await page.screenshot({ path: path.join(root, 'assets/mobile-check.jpg'), type: 'jpeg', quality: 75, fullPage: true });
   const overflow = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(n => n.getBoundingClientRect().right > innerWidth + 1 && getComputedStyle(n).position !== 'fixed').map(n=>({tag:n.tagName,id:n.id,class:n.className,right:Math.round(n.getBoundingClientRect().right)})).slice(0,25));
   if (await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)) console.log('Overflow details:', overflow);
@@ -88,7 +108,40 @@ async function main() {
   assert.equal(await page.locator('#importBtn').evaluate(n => n === document.activeElement), true);
   assert.deepEqual(errors, []);
   console.log('PASS mobile overflow, keyboard focus, and no JavaScript page errors');
-  console.log('10 browser workflow checks passed.');
+
+  // No-install demo: the same page opened from disk runs the browser engine.
+  const demo = await browser.newPage({ viewport: { width: 1440, height: 1100 } });
+  const demoErrors = [];
+  demo.on('pageerror', e => demoErrors.push(e.message));
+  await demo.goto('file://' + path.join(root, 'static', 'index.html'));
+  await demo.locator('#projectName').filter({ hasText: 'Atlas Partner API' }).waitFor();
+  assert.equal(await demo.locator('#demoBanner').isVisible(), true);
+  assert.equal(await demo.locator('#health').innerText(), 'Needs attention');
+  assert.equal(await demo.locator('#alerts article').count(), 13);
+  await demo.locator('#driftChart .actual-dot').first().waitFor();
+  await demo.waitForTimeout(500);
+  await demo.screenshot({ path: path.join(root, 'assets/live-demo.jpg'), type: 'jpeg', quality: 82 });
+  console.log('PASS browser demo loads the same assessment without a server');
+  await demo.locator('#alerts article').filter({ hasText: 'Quality needs a release decision' }).getByRole('button', { name: 'Acknowledge' }).click();
+  await demo.locator('#toast').filter({ hasText: 'Acknowledged.' }).waitFor();
+  await demo.getByRole('button', { name: 'Edit Authentication contract', exact: true }).click();
+  await demo.selectOption('#editStatus', 'done');
+  await demo.getByRole('button', { name: 'Save and recheck project', exact: true }).click();
+  await demo.locator('#taskDialog').waitFor({ state: 'hidden' });
+  await demo.reload();
+  await demo.locator('#projectName').filter({ hasText: 'Atlas Partner API' }).waitFor();
+  assert.ok((await demo.locator('#taskRows tr').filter({ hasText: 'Authentication contract' }).innerText()).includes('done'));
+  await demo.selectOption('#alertFilter', 'acknowledged');
+  assert.equal(await demo.locator('#alerts article').count(), 1);
+  console.log('PASS browser demo edits and acknowledgement persist after reload');
+  await demo.click('#resetDemo');
+  await demo.locator('#projectName').filter({ hasText: 'Atlas Partner API' }).waitFor();
+  await demo.selectOption('#alertFilter', 'acknowledged');
+  assert.equal(await demo.locator('#alerts article').count(), 0);
+  assert.equal(await demo.locator('#aiBtn').isDisabled(), true);
+  assert.deepEqual(demoErrors, []);
+  console.log('PASS browser demo reset and no JavaScript page errors');
+  console.log('15 browser workflow checks passed.');
 }
 main().catch(e => { console.error(e); process.exitCode = 1; }).finally(async () => {
   if (browser) await browser.close();

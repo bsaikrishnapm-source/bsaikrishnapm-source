@@ -35,6 +35,33 @@ class WorkflowTests(unittest.TestCase):
     def test_repeated_identical_scan_does_not_duplicate_alerts_or_history(self):
         n=len(self.store.state()['alerts']);h=len(self.store.history('atlas'));self.store.scan();self.store.scan()
         self.assertEqual(len(self.store.state()['alerts']),n);self.assertEqual(len(self.store.history('atlas')),h)
+    def test_acknowledgement_records_time_and_clears_when_reopened(self):
+        aid=self.alert()['id'];self.store.acknowledge(aid);ack=self.alert()['acknowledged_at'];self.assertTrue(ack)
+        self.store.acknowledge(aid);self.assertEqual(self.alert()['acknowledged_at'],ack)
+        p=self.risk();p['quality']['open_critical']+=1;self.store.import_project(p)
+        self.assertEqual(self.alert()['state'],'open');self.assertIsNone(self.alert()['acknowledged_at'])
+    def test_task_edit_is_stamped_with_review_date(self):
+        self.store.set_date('2026-01-15')
+        self.store.update_task('pulse','P2',{'status':'blocked','progress':40})
+        t=next(t for t in next(x['project'] for x in self.store.state()['projects'] if x['project']['id']=='pulse')['tasks'] if t['id']=='P2')
+        self.assertEqual((t['updated_at'],t['blocked_since']),('2026-01-15','2026-01-15'))
+    def test_delete_project_removes_alerts_and_history_but_keeps_one(self):
+        self.store.delete_project('atlas')
+        state=self.store.state()
+        self.assertEqual([p['project']['id'] for p in state['projects']],['pulse'])
+        self.assertFalse(any(a['project_id']=='atlas' for a in state['alerts']));self.assertEqual(self.store.history('atlas'),[])
+        with self.assertRaises(ValidationError):self.store.delete_project('pulse')
+        with self.assertRaises(ValidationError):self.store.delete_project('missing')
+    def test_new_workspace_has_drift_history(self):
+        h=self.store.history('atlas');self.assertEqual(len(h),4)
+        self.assertEqual(set(h[0]),{'scanned_at','as_of','health','metrics'})
+        self.assertLess(h[0]['metrics']['gap'],h[-1]['metrics']['gap'])
+    def test_old_database_is_migrated(self):
+        import sqlite3
+        old=Path(self.tmp.name)/'old.sqlite3';db=sqlite3.connect(old)
+        db.executescript('CREATE TABLE alerts(id TEXT PRIMARY KEY, project_id TEXT, body TEXT, state TEXT, first_seen TEXT, last_seen TEXT);');db.close()
+        store=Store(old);aid=next(a['id'] for a in store.state()['alerts'] if a['code']=='quality');store.acknowledge(aid)
+        self.assertTrue(next(a for a in store.state()['alerts'] if a['id']==aid)['acknowledged_at'])
     def test_import_creates_distinct_project(self):
         p=self.risk();p['id']='my-project';self.store.import_project(p);self.assertEqual(len(self.store.state()['projects']),3)
 
@@ -57,6 +84,13 @@ class HttpTests(unittest.TestCase):
         saved=json.load(self.req('/api/state'));p2=next(x['project'] for x in saved['projects'] if x['project']['id']=='atlas');self.assertEqual(p2['tasks'][1]['progress'],100)
         self.req('/api/import',{'project':p2}).close()
         self.assertEqual(json.load(self.req('/api/brief',{'project_id':'atlas'}))['source'],'Evidence rules')
+    def test_delete_project_over_http_and_missing_field_message(self):
+        state=json.load(self.req('/api/delete-project',{'project_id':'pulse'}));self.assertEqual(len(state['projects']),1)
+        with self.assertRaises(HTTPError) as c:self.req('/api/task',{})
+        self.assertEqual((c.exception.code,json.load(c.exception)['error']),(400,'Missing field: project_id'))
+    def test_history_endpoint_is_compact(self):
+        with self.req('/api/history?project=atlas') as r:h=json.load(r)
+        self.assertEqual(len(h),4);self.assertNotIn('alerts',h[-1]);self.assertEqual(h[-1]['metrics']['actual'],35.5)
     def test_invalid_import_returns_400(self):
         with self.assertRaises(HTTPError) as c:self.req('/api/import',{'project':{'id':'bad'}})
         self.assertEqual(c.exception.code,400)
