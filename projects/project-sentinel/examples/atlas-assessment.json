@@ -115,45 +115,45 @@
       "project_id": "atlas",
       "code": "dependency",
       "severity": "warning",
-      "title": "Blocked path: Partner sandbox",
-      "evidence": "Task reported blocked. Unfinished prerequisites: Authentication contract.",
+      "title": "Dependency risk: Partner sandbox",
+      "evidence": "Unfinished prerequisites: Authentication contract (blocked).",
       "suggestion": "Bring prerequisite owners together; unblock or resequence work and confirm the effect on the milestone.",
       "owner": "Alex",
       "task_ids": [
         "A3",
         "A2"
       ],
-      "fingerprint": "31d6b6f5472927f0"
+      "fingerprint": "ac7a847ff4070408"
     },
     {
       "id": "atlas:dependency:A4",
       "project_id": "atlas",
       "code": "dependency",
       "severity": "warning",
-      "title": "Blocked path: Self-service setup",
-      "evidence": "Task reported blocked. Unfinished prerequisites: Partner sandbox.",
+      "title": "Dependency risk: Self-service setup",
+      "evidence": "Unfinished prerequisites: Partner sandbox (unfinished; this task has already started).",
       "suggestion": "Bring prerequisite owners together; unblock or resequence work and confirm the effect on the milestone.",
       "owner": "Sam",
       "task_ids": [
         "A4",
         "A3"
       ],
-      "fingerprint": "e73142612257762d"
+      "fingerprint": "44261edcd2d3f395"
     },
     {
       "id": "atlas:dependency:A5",
       "project_id": "atlas",
       "code": "dependency",
       "severity": "warning",
-      "title": "Blocked path: Contract and regression tests",
-      "evidence": "Task reported blocked. Unfinished prerequisites: Partner sandbox.",
+      "title": "Dependency risk: Contract and regression tests",
+      "evidence": "Unfinished prerequisites: Partner sandbox (unfinished; this task has already started).",
       "suggestion": "Bring prerequisite owners together; unblock or resequence work and confirm the effect on the milestone.",
       "owner": "Riley",
       "task_ids": [
         "A5",
         "A3"
       ],
-      "fingerprint": "e73142612257762d"
+      "fingerprint": "44261edcd2d3f395"
     },
     {
       "id": "atlas:overdue:A2",
@@ -216,6 +216,52 @@
       "tool": "quality_and_evidence_check",
       "findings": 3,
       "reason": "Inspect quality, decision latency and stale or future records."
+    }
+  ],
+  "plan": [
+    {
+      "date": "2026-09-01",
+      "expected": 0.0
+    },
+    {
+      "date": "2026-09-07",
+      "expected": 10.0
+    },
+    {
+      "date": "2026-09-08",
+      "expected": 10.0
+    },
+    {
+      "date": "2026-09-13",
+      "expected": 16.7
+    },
+    {
+      "date": "2026-09-19",
+      "expected": 32.7
+    },
+    {
+      "date": "2026-09-22",
+      "expected": 44.7
+    },
+    {
+      "date": "2026-09-23",
+      "expected": 49.6
+    },
+    {
+      "date": "2026-09-28",
+      "expected": 67.6
+    },
+    {
+      "date": "2026-10-04",
+      "expected": 81.2
+    },
+    {
+      "date": "2026-10-08",
+      "expected": 91.7
+    },
+    {
+      "date": "2026-10-13",
+      "expected": 100.0
     }
   ],
   "brief": {
